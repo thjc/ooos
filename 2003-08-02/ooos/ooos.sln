@@ -1,0 +1,27 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OOOS", "OOOS.vcproj", "{E8636840-0A45-4FDC-8F2A-B9C30479131A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "COFF2BIN", "..\COFF2BIN\COFF2BIN.vcproj", "{BE4E921E-8E25-4B93-BF25-22527F93AFAF}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{E8636840-0A45-4FDC-8F2A-B9C30479131A}.Debug.ActiveCfg = Release|Win32
+		{E8636840-0A45-4FDC-8F2A-B9C30479131A}.Debug.Build.0 = Release|Win32
+		{E8636840-0A45-4FDC-8F2A-B9C30479131A}.Release.ActiveCfg = Release|Win32
+		{E8636840-0A45-4FDC-8F2A-B9C30479131A}.Release.Build.0 = Release|Win32
+		{BE4E921E-8E25-4B93-BF25-22527F93AFAF}.Debug.ActiveCfg = Debug|Win32
+		{BE4E921E-8E25-4B93-BF25-22527F93AFAF}.Debug.Build.0 = Debug|Win32
+		{BE4E921E-8E25-4B93-BF25-22527F93AFAF}.Release.ActiveCfg = Release|Win32
+		{BE4E921E-8E25-4B93-BF25-22527F93AFAF}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,286 @@
+     1                                  	org 0x7c00
+     2                                  
+     3                                  ; ------------------------------------------------------------------------
+     4                                  ; Cabooose boot loader code            	Thanks to Jeff Weeks for sample code it was buit from
+     5                                  ; 					and lots of other code bits
+     6                                  ; ------------------------------------------------------------------------
+     7                                  
+     8                                  
+     9                                  ; ------------------------------------------------------------------------
+    10                                  ; PolyOS boot loader code            (c)1997 Jeff Weeks of Code X Software
+    11                                  ; ------------------------------------------------------------------------
+    12                                  ; This little bit of assembly is the boot loader for my operating system.
+    13                                  ; ------------------------------------------------------------------------
+    14                                  
+    15                                  	BITS 16       ; the bios starts out in 16-bit real mode
+    16                                  	section .text bootloader
+    17                                  
+    18                                  
+    19                                  ; -----------------
+    20                                  ; Equates needed to locate other code
+    21                                  ; -----------------
+    22                                  kernel		equ	0x91000	; pm address of kernel code
+    23                                  kernel_16	equ	0x9000	; rm address of kernel base
+    24                                  
+    25                                  ; ------------------------------------------------------------------------
+    26                                  ; SECTOR ONE: THE BOOT LOADER
+    27                                  ; ------------------------------------------------------------------------
+    28                                  ; This sector detects your processor.  If a 386 is found, it loads the
+    29                                  ; kernel from the disk and executes it (atleast it will in the future :).
+    30                                  ; ------------------------------------------------------------------------
+    31                                  
+    32                                  
+    33 00000000 E9F800                  	jmp start       ; skip over our data and functions
+    34                                  ; -------------------------------------
+    35                                  ; Data used in the boot-loading process
+    36                                  ; ------------------------------------------------------------------------
+    37 00000003 00                              bootdrv         db 0
+    38 00000004 0D0A4361626F6F7365-             bootmsg         db 13,10,'Caboose v0.0',13,10,0
+    39 0000000D 2076302E300D0A00   
+    40 00000015 4C6467206B726E6C0D-             loadmsg         db 'Ldg krnl',13,10,0
+    41 0000001E 0A00               
+    42 00000020 4A6D706720746F206B-             jumpmsg         db 'Jmpg to krnl',13,10,0
+    43 00000029 726E6C0D0A00       
+    44 0000002F 7072657373206B6579-             rebootmsg       db 'press key',13,10,0
+    45 00000038 0D0A00             
+    46                                  
+    47                                          ; these are used in the processor identification
+    48 0000003B 436865636B696E6720-             processormsg    db 'Checking for 386+ : ',0
+    49 00000044 666F72203338362B20-
+    50 0000004D 3A2000             
+    51 00000050 536F7272790D0A00                need386         db 'Sorry',13,10,0
+    52 00000058 476F6F64210D0A00                found386        db 'Good!',13,10,0
+    53                                  
+    54                                          ; these are used when entering protected mode
+    55 00000060 53657474696E672041-             a20msg          db 'Setting A20 address line',13,10,0
+    56 00000069 323020616464726573-
+    57 00000072 73206C696E650D0A00 
+    58 0000007B 53657474696E672043-             pmodemsg        db 'Setting CR0 -> Entering PMode',13,10,0
+    59 00000084 5230202D3E20456E74-
+    60 0000008D 6572696E6720504D6F-
+    61 00000096 64650D0A00         
+    62                                  
+    63                                          ; Here's the locations of my IDT and GDT.  Remember, Intel's are
+    64                                          ; little endian processors, therefore, these are in reversed order.
+    65                                          ; Also note that lidt and lgdt accept a 32-bit address and 16-bit 
+    66                                          ; limit, therefore, these are 48-bit variables.
+    67                                          pIDT            
+    68 0000009B FF07                    			dw 7FFh         ; limit of 256 IDT slots
+    69 0000009D 00000000                            dd 0000h        ; starting at 0000
+    70                                  
+    71                                          pGDT            
+    72 000000A1 FF17                    			dw 17FFh        ; limit of 768 GDT slots
+    73 000000A3 00080000                            dd 0800h        ; starting at 0800h (after IDT)
+    74                                  
+    75                                  
+    76                                  
+    77                                  ; ------------------------------------------
+    78                                  ; Functions used in the boot-loading process
+    79                                  ; ------------------------------------------------------------------------
+    80                                          detect_cpu:
+    81 000000A7 BE[3B00]                                mov si, processormsg    ; tell the user what we're doing
+    82 000000AA E82B00                                  call message
+    83                                  
+    84                                                  ; test if 8088/8086 is present (flag bits 12-15 will be set)
+    85 000000AD 9C                                      pushf                   ; save the flags original value
+    86                                                  
+    87 000000AE 30E4                                    xor ah,ah               ; ah = 0
+    88 000000B0 50                                      push ax                 ; copy ax into the flags
+    89 000000B1 9D                                      popf                    ; with bits 12-15 clear
+    90                                                  
+    91 000000B2 9C                                      pushf                   ; Read flags back into ax
+    92 000000B3 58                                      pop ax       
+    93 000000B4 80E4F0                                  and ah,0f0h             ; check if bits 12-15 are set
+    94 000000B7 80FCF0                                  cmp ah,0f0h
+    95 000000BA 7413                                    je no386                ; no 386 detected (8088/8086 present)
+    96                                  
+    97                                                  ; check for a 286 (bits 12-15 are clear)
+    98 000000BC B4F0                                    mov ah,0f0h             ; set bits 12-15
+    99 000000BE 50                                      push ax                 ; copy ax onto the flags
+   100 000000BF 9D                                      popf
+   101                                                  
+   102 000000C0 9C                                      pushf                   ; copy the flags into ax
+   103 000000C1 58                                      pop ax
+   104 000000C2 80E4F0                                  and ah,0f0h             ; check if bits 12-15 are clear
+   105 000000C5 7408                                    jz no386                ; no 386 detected (80286 present)
+   106 000000C7 9D                                      popf                    ; pop the original flags back
+   107                                                  
+   108 000000C8 BE[5800]                                mov si, found386
+   109 000000CB E80A00                                  call message
+   110                                                  
+   111 000000CE C3                                      ret                     ; no 8088/8086 or 286, so ateast 386
+   112                                           no386:
+   113 000000CF BE[5000]                                mov si,need386          ; tell the user the problem
+   114 000000D2 E80300                                  call message
+   115 000000D5 E91500                                  jmp reboot              ; and reboot when key pressed
+   116                                                       
+   117                                  ;       ------------------------------------------------------------------
+   118                                          message:                        ; Dump ds:si to screen.
+   119 000000D8 AC                                      lodsb                   ; load byte at ds:si into al
+   120 000000D9 08C0                                    or al,al                ; test if character is 0 (end)
+   121 000000DB 740A                                    jz done
+   122 000000DD B40E                                    mov ah,0eh              ; put character
+   123 000000DF BB0700                                  mov bx,0007             ; attribute
+   124 000000E2 CD10                                    int 0x10                ; call BIOS
+   125 000000E4 E9F1FF                                  jmp message
+   126                                          done:
+   127 000000E7 C3                                      ret
+   128                                  ;       ------------------------------------------------------------------
+   129                                          getkey:
+   130 000000E8 B400                                    mov ah, 0               ; wait for key
+   131 000000EA CD16                                    int 016h
+   132 000000EC C3                                      ret
+   133                                  
+   134                                  ;       ------------------------------------------------------------------        
+   135                                          reboot:
+   136 000000ED BE[2F00]                                mov si, rebootmsg       ; be polite, and say we're rebooting
+   137 000000F0 E8E5FF                                  call message
+   138 000000F3 E8F2FF                                  call getkey             ; and even wait for a key :)
+   139                                  
+   140 000000F6 EA                                      db 0EAh                 ; machine language to jump to FFFF:0000 (reboot)
+   141 000000F7 0000                                    dw 0000h
+   142 000000F9 FFFF                                    dw 0FFFFh
+   143                                                  ; no ret required; we're rebooting! (Hey, I just saved a byte :)
+   144                                  
+   145                                  ; -------------------------------------------
+   146                                  ; The actual code of our boot loading process
+   147                                  ; ------------------------------------------------------------------------
+   148                                  start:
+   149 000000FB 31C0                            xor ax,ax    ; BIOS puts us at 0:07C00h, so set DS accordinly
+   150 000000FD 8ED8                            mov ds,ax       ; Therefore, we don't have to add 07C00h to all our data
+   151 000000FF 31C0                    		xor ax,ax
+   152 00000101 8CE0                    		mov ax,fs
+   153                                  
+   154 00000103 8816[0300]                      mov [bootdrv], dl ; quickly save what drive we booted from
+   155                                  
+   156 00000107 FA                              cli             ; clear interrupts while we setup a stack
+   157 00000108 B80080                          mov ax,0x8000   ; this seems to be the typical place for a stack
+   158 0000010B 8ED0                            mov ss,ax
+   159 0000010D BCFFFF                          mov sp,0xffff   ; let's use the whole segment.  Why not?  We can :)
+   160 00000110 FB                              sti             ; put our interrupts back on
+   161                                          
+   162                                          ; Interestingly enough, apparently the processor will disable 
+   163                                          ; interupts itself when you directly access the stack segment!
+   164                                          ; Atleast it does in protected mode, I'm not sure about real mode.
+   165                                          
+   166 00000111 BE[0400]                        mov si,bootmsg  ; display our startup message
+   167 00000114 E8C1FF                          call message
+   168                                   
+   169 00000117 E88DFF                          call detect_cpu ; check if we've got a 386
+   170                                  
+   171                                  .386    ; use 386 instructions from now on (I don't want to manually include
+   172                                          ; operand-size(66h) or address-size(67h) prefixes... it's annoying :)
+   173                                  
+   174 0000011A BE[1500]                        mov si,loadmsg  ; tell the user we're loading the kernel
+   175 0000011D E8B8FF                          call message
+   176                                          ;call getkey
+   177                                  
+   178                                  read_me:
+   179                                          ; first, reset the disk controller
+   180 00000120 31C0                            xor ax, ax
+   181 00000122 CD13                            int 0x13
+   182 00000124 72C7                            jc reboot       ; reboot on error
+   183                                  
+   184                                          ; then load in the PolyFS superblock
+   185 00000126 B80090                          mov ax,kernel_16          ; superblock goes to 9000:0000 (above stack)
+   186 00000129 8EC0                            mov es,ax
+   187 0000012B 31DB                            xor bx,bx
+   188                                  
+   189                                          ; I could condense a few of these high/low 8-bit movs into one 16-bit
+   190                                          ; mov, but, for simplicity, I'll leave it as is, unless necessary.
+   191 0000012D B82002                          mov ax,0x0220           ; load 32 blocks (64 sectors)
+   192 00000130 B500                            mov ch,0                ; cylinder = 0
+   193 00000132 B102                            mov cl,2                ; sector = 2 (starts at sector 1 not 0)
+   194 00000134 B600                            mov dh,0                ; head = 0 = side one
+   195 00000136 8A16[0300]                      mov dl,[bootdrv]        ; disk = what we booted from
+   196 0000013A CD13                            int 0x13                ; read it
+   197 0000013C 72E2                            jc read_me              ; if there's an error then we'll try again.
+   198                                                                  ; Often there is not error but requires a few
+   199                                                                  ; tries.  Ofcourse, this may end up as an 
+   200                                                                  ; infinite loop... but only on a bad disk...
+   201                                          
+   202                                  
+   203                                  	; Ideally, we'd load the kernel right here
+   204                                  
+   205 0000013E BE[6000]                        mov si, a20msg          ; tell the user we're setting the A20 line
+   206 00000141 E894FF                          call message
+   207                                  
+   208                                          ; set A20 line
+   209 00000144 FA                              cli                     ; no more interuptions! :)
+   210 00000145 31C9                            xor cx, cx
+   211                                  clear_buf:
+   212 00000147 E464                            in al, 64h              ; get input from keyboard status port
+   213 00000149 A802                            test al, 02h            ; test the buffer full flag
+   214 0000014B E0FA                            loopnz clear_buf        ; loop until buffer is empty
+   215 0000014D B0D1                            mov al, 0D1h            ; keyboard: write to output port
+   216 0000014F E664                            out 64h, al             ; output command to keyboard
+   217                                  clear_buf2:
+   218 00000151 E464                            in al, 64h              ; wait 'till buffer is empty again
+   219 00000153 A802                            test al, 02h
+   220 00000155 E0FA                            loopnz clear_buf2
+   221 00000157 B0DF                            mov al, 0dfh            ; keyboard: set A20
+   222 00000159 E660                            out 60h, al             ; send it to the keyboard controller
+   223 0000015B B91400                          mov cx, 14h
+   224                                  wait_kbc:                       ; this is approx. a 25uS delay to wait
+   225 0000015E E7ED                            out 0edh, ax            ; for the kb controler to execute our 
+   226 00000160 E2FC                            loop wait_kbc           ; command.
+   227                                  
+   228                                  	;push ds
+   229                                  	;xor ax,ax
+   230                                  	;mov ds, ax
+   231                                  	; build our GDT?
+   232 00000162 668B1E[A300]            	mov ebx, [pGDT+2]
+   233 00000167 66C70700000000          	mov DWORD [bx], 0
+   234 0000016E 66C7470400000000        	mov DWORD [bx + 4], 0
+   235 00000176 66C74708FFFF0000        	mov DWORD [bx + 8],  0x0000ffff ; code segment
+   236 0000017E 66C7470C009ACF00        	mov DWORD [bx + 12], 0x00Cf9A00 ;this one is 32 bit
+   237 00000186 66C74710FFFF0000        	mov DWORD [bx + 16],  0x0000ffff ; data segment
+   238 0000018E 66C747140092CF00        	mov DWORD [bx + 20], 0x00Cf9200 ;this one is 32 bit
+   239                                  	;pop ds
+   240                                  
+   241                                  
+   242                                          ; the A20 line is on now.  Let's load in our ITD and GDT tables...
+   243                                          ; Ideally, there will actually be data in their locations (by loading 
+   244                                          ; the kernel)
+   245 00000196 0F011E[9B00]                    lidt [pIDT]
+   246 0000019B 0F0116[A100]                    lgdt [pGDT]
+   247                                  
+   248                                  	
+   249                                  
+   250                                          ; now let's enter pmode...
+   251 000001A0 BE[7B00]                        mov si, pmodemsg
+   252 000001A3 E832FF                          call message
+   253                                          ;call getkey
+   254                                  
+   255                                  	
+   256 000001A6 0F20C0                      mov eax, cr0            ; load the control register in
+   257 000001A9 0F20C2                  	mov edx, cr0
+   258 000001AC 0C01                        or  al, 1               ; set bit 1: pmode bit
+   259 000001AE 0F22C0                      mov cr0, eax            ; copy it back to the control register
+   260                                  
+   261                                  	
+   262                                  	; Jump to next line to complete protected mode switch
+   263 000001B1 EA[B601]0800            	jmp 8:skiplabel
+   264                                  skiplabel:
+   265                                  [bits 32]
+   266                                  
+   267                                  	; just before we jump tot he kernel, set up the segmetn registers for it
+   268 000001B6 66B81000                	mov ax, 0x10	; set up data segment
+   269 000001BA 668ED8                  	mov ds, ax
+   270 000001BD 668EC0                  	mov es, ax	
+   271                                  
+   272 000001C0 668ED0                  	mov ss, ax	; and stack segment
+   273 000001C3 B800000800              	mov eax, 0x80000
+   274 000001C8 89C4                    	mov esp, eax	; and stack pointer
+   275                                  
+   276                                  	; now in 32 bit protected mode, jump to the kernel code
+   277 000001CA EA001009000800          	jmp 8:kernel
+   278                                  
+   279                                  
+   280                                  
+   281                                          ; The boot sector is supposed to have to have 0xAA55 at the end of 
+   282                                          ; the sector (the word at 510 bytes) to be loaded by the BIOS...
+   283 000001D1 00<rept>                        times 510-($-$$) db 0
+   284 000001FE 55AA                            dw 0xAA55
+   285                                  
+   286                                  	

@@ -1,0 +1,1372 @@
+Microsoft (R) COFF Binary File Dumper Version 6.00.8168
+Copyright (C) Microsoft Corp 1992-1998. All rights reserved.
+
+
+Dump of file test.obj
+
+File Type: COFF OBJECT
+
+FILE HEADER VALUES
+             14C machine (i386)
+              21 number of sections
+        3E64C0AB time date stamp Wed Mar 05 04:05:15 2003
+            1F14 file pointer to symbol table
+              9A number of symbols
+               0 size of optional header
+               0 characteristics
+
+SECTION HEADER #1
+.drectve name
+       0 physical address
+       0 virtual address
+      2A size of raw data
+     53C file pointer to raw data
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+  100A00 flags
+         Info
+         Remove
+         1 byte align
+
+RAW DATA #1
+  00000000: 2F 44 45 46 41 55 4C 54 4C 49 42 3A 22 4C 49 42  /DEFAULTLIB:"LIB
+  00000010: 43 22 20 2F 44 45 46 41 55 4C 54 4C 49 42 3A 22  C" /DEFAULTLIB:"
+  00000020: 4F 4C 44 4E 41 4D 45 53 22 20                    OLDNAMES" 
+
+   Linker Directives
+   -----------------
+   /DEFAULTLIB:"LIBC"
+   /DEFAULTLIB:"OLDNAMES"
+
+SECTION HEADER #2
+.debug$S name
+       0 physical address
+       0 virtual address
+     40C size of raw data
+     566 file pointer to raw data
+     972 file pointer to relocation table
+       0 file pointer to line numbers
+      16 number of relocations
+       0 number of line numbers
+42100040 flags
+         Initialized Data
+         Discardable
+         1 byte align
+         Read Only
+
+RAW DATA #2
+  00000000: 04 00 00 00 F1 00 00 00 7F 00 00 00 43 00 01 11  ....ñ.......C...
+  00000010: 00 00 00 00 64 3A 5C 4D 79 20 44 6F 63 75 6D 65  ....d:\My Docume
+  00000020: 6E 74 73 5C 50 72 6F 6A 65 63 74 73 5C 4F 4F 4F  nts\Projects\OOO
+  00000030: 53 5C 43 75 72 72 65 6E 74 5C 4F 4F 4F 53 5C 52  S\Current\OOOS\R
+  00000040: 65 6C 65 61 73 65 5C 54 65 73 74 2E 6F 62 6A 00  elease\Test.obj.
+  00000050: 00 38 00 16 11 01 00 00 00 06 00 0D 00 00 00 FA  .8.............ú
+  00000060: 24 0D 00 00 00 FA 24 4D 69 63 72 6F 73 6F 66 74  $....ú$Microsoft
+  00000070: 20 28 52 29 20 4F 70 74 69 6D 69 7A 69 6E 67 20   (R) Optimizing 
+  00000080: 43 6F 6D 70 69 6C 65 72 00 00 00 00 F3 00 00 00  Compiler....ó...
+  00000090: B2 00 00 00 24 54 32 20 24 65 73 70 20 2E 63 62  ²...$T2 $esp .cb
+  000000A0: 4C 6F 63 61 6C 73 20 2B 20 2E 63 62 53 61 76 65  Locals + .cbSave
+  000000B0: 64 52 65 67 73 20 2B 20 3D 20 24 54 30 20 2E 72  dRegs + = $T0 .r
+  000000C0: 61 53 65 61 72 63 68 53 74 61 72 74 20 3D 20 24  aSearchStart = $
+  000000D0: 65 69 70 20 24 54 30 20 5E 20 3D 20 24 65 73 70  eip $T0 ^ = $esp
+  000000E0: 20 24 54 30 20 34 20 2B 20 3D 00 24 54 30 20 24   $T0 4 + =.$T0 $
+  000000F0: 65 62 70 20 3D 20 24 65 69 70 20 24 54 30 20 34  ebp = $eip $T0 4
+  00000100: 20 2B 20 5E 20 3D 20 24 65 62 70 20 24 54 30 20   + ^ = $ebp $T0 
+  00000110: 5E 20 3D 20 24 65 73 70 20 24 54 30 20 38 20 2B  ^ = $esp $T0 8 +
+  00000120: 20 3D 20 24 4C 20 24 65 73 70 20 3D 20 24 50 20   = $L $esp = $P 
+  00000130: 24 54 30 20 34 20 2B 20 2E 63 62 50 61 72 61 6D  $T0 4 + .cbParam
+  00000140: 73 20 2B 20 3D 00 00 00 F1 00 00 00 00 00 00 00  s + =...ñ.......
+  00000150: 15 00 07 11 59 10 00 00 50 00 44 69 73 70 6C 61  ....Y...P.Displa
+  00000160: 79 57 69 64 74 68 00 16 00 07 11 59 10 00 00 19  yWidth.....Y....
+  00000170: 00 44 69 73 70 6C 61 79 48 65 69 67 68 74 00 1F  .DisplayHeight..
+  00000180: 00 0D 11 67 10 00 00 00 00 00 00 00 00 54 69 6D  ...g.........Tim
+  00000190: 65 72 44 72 69 76 65 72 3A 3A 54 69 63 6B 73 00  erDriver::Ticks.
+  000001A0: 10 00 07 11 2E 10 00 00 00 08 47 44 54 42 61 73  ..........GDTBas
+  000001B0: 65 00 13 00 07 11 2E 10 00 00 00 03 47 44 54 45  e...........GDTE
+  000001C0: 6E 74 72 69 65 73 00 19 00 07 11 2E 10 00 00 14  ntries..........
+  000001D0: 00 50 72 6F 63 65 73 73 47 44 54 4F 66 66 73 65  .ProcessGDTOffse
+  000001E0: 74 00 13 00 07 11 2E 10 00 00 F6 02 50 72 6F 63  t.........ö.Proc
+  000001F0: 65 73 73 4D 61 78 00 12 00 0D 11 38 10 00 00 00  essMax.....8....
+  00000200: 00 00 00 00 00 70 44 69 73 70 00 18 00 0D 11 33  .....pDisp.....3
+  00000210: 10 00 00 00 00 00 00 00 00 44 69 73 70 61 74 63  .........Dispatc
+  00000220: 68 54 53 53 00 17 00 0D 11 22 04 00 00 00 00 00  hTSS....."......
+  00000230: 00 00 00 49 44 54 41 64 64 72 65 73 73 00 17 00  ...IDTAddress...
+  00000240: 0D 11 22 04 00 00 00 00 00 00 00 00 47 44 54 41  ..".........GDTA
+  00000250: 64 64 72 65 73 73 00 16 00 0D 11 9E 10 00 00 00  ddress.....ž....
+  00000260: 00 00 00 00 00 44 75 6D 70 53 70 61 63 65 00 12  .....DumpSpace..
+  00000270: 00 0D 11 03 04 00 00 00 00 00 00 00 00 70 44 75  .............pDu
+  00000280: 6D 70 00 16 00 0D 11 33 10 00 00 00 00 00 00 00  mp.....3........
+  00000290: 00 47 6C 6F 62 61 6C 54 53 53 00 1A 00 0D 11 15  .GlobalTSS......
+  000002A0: 10 00 00 00 00 00 00 00 00 44 69 73 70 61 74 63  .........Dispatc
+  000002B0: 68 53 74 61 63 6B 00 11 00 0D 11 A0 10 00 00 00  hStack..... ....
+  000002C0: 00 00 00 00 00 70 41 6C 6C 00 11 00 0D 11 A0 10  .....pAll..... .
+  000002D0: 00 00 00 00 00 00 00 00 70 52 64 79 00 0E 00 08  ........pRdy....
+  000002E0: 11 9E 10 00 00 52 65 67 44 75 6D 70 00 0A 00 08  .ž...RegDump....
+  000002F0: 11 33 10 00 00 54 53 53 00 15 00 08 11 87 10 00  .3...TSS.....‡..
+  00000300: 00 4B 65 79 62 6F 61 72 64 44 72 69 76 65 72 00  .KeyboardDriver.
+  00000310: 10 00 08 11 62 10 00 00 56 69 64 65 6F 50 61 67  ....b...VideoPag
+  00000320: 65 00 11 00 08 11 5E 10 00 00 43 75 72 73 6F 72  e.....^...Cursor
+  00000330: 49 6E 66 6F 00 12 00 08 11 4F 10 00 00 56 69 64  Info.....O...Vid
+  00000340: 65 6F 44 72 69 76 65 72 00 12 00 08 11 20 10 00  eoDriver..... ..
+  00000350: 00 50 72 6F 63 65 73 73 4E 6F 64 65 00 13 00 08  .ProcessNode....
+  00000360: 11 A0 10 00 00 50 72 6F 63 65 73 73 51 75 65 75  . ...ProcessQueu
+  00000370: 65 00 0A 00 08 11 31 10 00 00 50 43 42 00 0C 00  e.....1...PCB...
+  00000380: 08 11 22 00 00 00 44 57 4F 52 44 00 0E 00 08 11  .."...DWORD.....
+  00000390: 19 10 00 00 50 72 6F 63 65 73 73 00 17 00 08 11  ....Process.....
+  000003A0: 5B 10 00 00 44 69 73 70 6C 61 79 43 68 61 72 61  [...DisplayChara
+  000003B0: 63 74 65 72 00 0B 00 08 11 21 00 00 00 57 4F 52  cter.....!...WOR
+  000003C0: 44 00 0B 00 08 11 20 00 00 00 42 59 54 45 00 0D  D..... ...BYTE..
+  000003D0: 00 08 11 75 00 00 00 73 69 7A 65 5F 74 00 12 00  ...u...size_t...
+  000003E0: 08 11 6A 10 00 00 54 69 6D 65 72 44 72 69 76 65  ..j...TimerDrive
+  000003F0: 72 00 0B 00 08 11 2D 10 00 00 49 64 6C 65 00 0B  r.....-...Idle..
+  00000400: 00 08 11 77 10 00 00 49 6E 69 74 00              ...w...Init.
+
+RELOCATIONS #2
+                                                Symbol    Symbol
+ Offset    Type              Applied To         Index     Name
+ --------  ----------------  -----------------  --------  ------
+ 00000187  SECREL                     00000000        8E  ?Ticks@TimerDriver@@2KC (public: static unsigned long volatile  TimerDriver::Ticks)
+ 0000018B  SECTION                        0000        8E  ?Ticks@TimerDriver@@2KC (public: static unsigned long volatile  TimerDriver::Ticks)
+ 000001FF  SECREL                     00000000        80  ?pDisp@@3PAVVideoDriver@@A (class VideoDriver *  pDisp)
+ 00000203  SECTION                        0000        80  ?pDisp@@3PAVVideoDriver@@A (class VideoDriver *  pDisp)
+ 00000213  SECREL                     00000000         C  ?DispatchTSS@@3UTSS@@A (struct TSS  DispatchTSS)
+ 00000217  SECTION                        0000         C  ?DispatchTSS@@3UTSS@@A (struct TSS  DispatchTSS)
+ 0000022D  SECREL                     00000000        73  ?IDTAddress@@3PAKA (unsigned long *  IDTAddress)
+ 00000231  SECTION                        0000        73  ?IDTAddress@@3PAKA (unsigned long *  IDTAddress)
+ 00000246  SECREL                     00000000        5D  ?GDTAddress@@3PAKA (unsigned long *  GDTAddress)
+ 0000024A  SECTION                        0000        5D  ?GDTAddress@@3PAKA (unsigned long *  GDTAddress)
+ 0000025F  SECREL                     00000000         E  ?DumpSpace@@3URegDump@@A (struct RegDump  DumpSpace)
+ 00000263  SECTION                        0000         E  ?DumpSpace@@3URegDump@@A (struct RegDump  DumpSpace)
+ 00000277  SECREL                     00000000         9  ?pDump@@3PAXA (void *  pDump)
+ 0000027B  SECTION                        0000         9  ?pDump@@3PAXA (void *  pDump)
+ 0000028B  SECREL                     00000000         F  ?GlobalTSS@@3UTSS@@A (struct TSS  GlobalTSS)
+ 0000028F  SECTION                        0000         F  ?GlobalTSS@@3UTSS@@A (struct TSS  GlobalTSS)
+ 000002A3  SECREL                     00000000         D  ?DispatchStack@@3PAEA (unsigned char *  DispatchStack)
+ 000002A7  SECTION                        0000         D  ?DispatchStack@@3PAEA (unsigned char *  DispatchStack)
+ 000002BF  SECREL                     00000000        97  ?pAll@@3VProcessQueue@@A (class ProcessQueue  pAll)
+ 000002C3  SECTION                        0000        97  ?pAll@@3VProcessQueue@@A (class ProcessQueue  pAll)
+ 000002D2  SECREL                     00000000        96  ?pRdy@@3VProcessQueue@@A (class ProcessQueue  pRdy)
+ 000002D6  SECTION                        0000        96  ?pRdy@@3VProcessQueue@@A (class ProcessQueue  pRdy)
+
+SECTION HEADER #3
+   .data name
+       0 physical address
+       0 virtual address
+       4 size of raw data
+     A4E file pointer to raw data
+     A52 file pointer to relocation table
+       0 file pointer to line numbers
+       1 number of relocations
+       0 number of line numbers
+C0300040 flags
+         Initialized Data
+         4 byte align
+         Read Write
+
+RAW DATA #3
+  00000000: 00 00 00 00                                      ....
+
+RELOCATIONS #3
+                                                Symbol    Symbol
+ Offset    Type              Applied To         Index     Name
+ --------  ----------------  -----------------  --------  ------
+ 00000000  DIR32                      00000000         E  ?DumpSpace@@3URegDump@@A (struct RegDump  DumpSpace)
+
+SECTION HEADER #4
+    .bss name
+       0 physical address
+       0 virtual address
+     510 size of raw data
+       0 file pointer to raw data
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+C0400080 flags
+         Uninitialized Data
+         8 byte align
+         Read Write
+
+SECTION HEADER #5
+   .text name
+       0 physical address
+       0 virtual address
+      10 size of raw data
+     A5C file pointer to raw data
+       0 file pointer to relocation table
+     A6C file pointer to line numbers
+       0 number of relocations
+       1 number of line numbers
+60501020 flags
+         Code
+         Communal; sym= "public: __thiscall ProcessNode::ProcessNode(void)" (??0ProcessNode@@QAE@XZ)
+         16 byte align
+         Execute Read
+
+RAW DATA #5
+  00000000: 8B C1 C7 00 00 00 00 00 C3 90 90 90 90 90 90 90  ‹ÁÇ.....Ã.......
+
+LINENUMBERS #5
+
+ Symbol index:       18 Base line number:   103
+ Symbol name = ??0ProcessNode@@QAE@XZ (public: __thiscall ProcessNode::ProcessNode(void))
+
+SECTION HEADER #6
+.debug$S name
+       0 physical address
+       0 virtual address
+      8B size of raw data
+     A72 file pointer to raw data
+     AFD file pointer to relocation table
+       0 file pointer to line numbers
+       3 number of relocations
+       0 number of line numbers
+42101040 flags
+         Initialized Data
+         Communal (no symbol)
+         Discardable
+         1 byte align
+         Read Only
+
+RAW DATA #6
+  00000000: 04 00 00 00 F5 00 00 00 24 00 00 00 00 00 00 00  ....õ...$.......
+  00000010: 00 00 00 00 09 00 00 00 00 00 00 00 00 00 00 00  ................
+  00000020: 00 00 00 00 00 00 00 00 02 00 00 00 04 00 00 00  ................
+  00000030: F1 00 00 00 00 00 00 00 3E 00 10 11 00 00 00 00  ñ.......>.......
+  00000040: 00 00 00 00 00 00 00 00 09 00 00 00 02 00 00 00  ................
+  00000050: 08 00 00 00 1C 10 00 00 00 00 00 00 00 00 00 50  ...............P
+  00000060: 72 6F 63 65 73 73 4E 6F 64 65 3A 3A 50 72 6F 63  rocessNode::Proc
+  00000070: 65 73 73 4E 6F 64 65 00 0D 00 06 11 1B 10 00 00  essNode.........
+  00000080: 12 00 74 68 69 73 00 02 00 06 00                 ..this.....
+
+RELOCATIONS #6
+                                                Symbol    Symbol
+ Offset    Type              Applied To         Index     Name
+ --------  ----------------  -----------------  --------  ------
+ 0000000C  DIR32NB                    00000000        18  ??0ProcessNode@@QAE@XZ (public: __thiscall ProcessNode::ProcessNode(void))
+ 00000058  SECREL                     00000000        18  ??0ProcessNode@@QAE@XZ (public: __thiscall ProcessNode::ProcessNode(void))
+ 0000005C  SECTION                        0000        18  ??0ProcessNode@@QAE@XZ (public: __thiscall ProcessNode::ProcessNode(void))
+
+SECTION HEADER #7
+.debug$F name
+       0 physical address
+       0 virtual address
+      10 size of raw data
+     B1B file pointer to raw data
+     B2B file pointer to relocation table
+       0 file pointer to line numbers
+       1 number of relocations
+       0 number of line numbers
+42101040 flags
+         Initialized Data
+         Communal (no symbol)
+         Discardable
+         1 byte align
+         Read Only
+
+RAW DATA #7
+  00000000: 00 00 00 00 09 00 00 00 00 00 00 00 00 00 02 00  ................
+
+FPO Data (1)
+                                             Use Has  Frame
+ RVA      Proc Size   Locals  Regs   Prolog  BP  SEH  Type   Params
+ 00000000         9        0     0        2   N   N    fpo        0
+
+RELOCATIONS #7
+                                                Symbol    Symbol
+ Offset    Type              Applied To         Index     Name
+ --------  ----------------  -----------------  --------  ------
+ 00000000  DIR32NB                    00000000        18  ??0ProcessNode@@QAE@XZ (public: __thiscall ProcessNode::ProcessNode(void))
+
+SECTION HEADER #8
+   .text name
+       0 physical address
+       0 virtual address
+      B0 size of raw data
+     B35 file pointer to raw data
+     BE5 file pointer to relocation table
+     CE9 file pointer to line numbers
+      1A number of relocations
+       A number of line numbers
+60501020 flags
+         Code
+         Communal; sym= "void __cdecl Exception13_CPP(void)" (?Exception13_CPP@@YAXXZ)
+         16 byte align
+         Execute Read
+
+RAW DATA #8
+  00000000: 68 00 00 00 00 E8 00 00 00 00 A1 20 00 00 00 50  h....è....¡ ...P
+  00000010: 68 00 00 00 00 E8 00 00 00 00 8B 0D 24 00 00 00  h....è....‹.$...
+  00000020: 8B 15 28 00 00 00 51 52 68 00 00 00 00 E8 00 00  ‹.(...QRh....è..
+  00000030: 00 00 A1 2C 00 00 00 50 68 00 00 00 00 E8 00 00  ..¡,...Ph....è..
+  00000040: 00 00 68 00 00 00 00 E8 00 00 00 00 8B 0D 0C 00  ..h....è....‹...
+  00000050: 00 00 8B 15 08 00 00 00 A1 04 00 00 00 51 8B 0D  ..‹.....¡....Q‹.
+  00000060: 00 00 00 00 52 50 51 68 00 00 00 00 E8 00 00 00  ....RPQh....è...
+  00000070: 00 8B 15 1C 00 00 00 A1 18 00 00 00 8B 0D 14 00  .‹.....¡....‹...
+  00000080: 00 00 52 8B 15 10 00 00 00 50 51 52 68 00 00 00  ..R‹.....PQRh...
+  00000090: 00 E8 00 00 00 00 83 C4 4C 8D A4 24 00 00 00 00  .è....ƒÄL.¤$....
+  000000A0: EB FE 90 90 90 90 90 90 90 90 90 90 90 90 90 90  ëþ..............
+
+RELOCATIONS #8
+                                                Symbol    Symbol
+ Offset    Type              Applied To         Index     Name
+ --------  ----------------  -----------------  --------  ------
+ 00000001  DIR32                      00000000        40  ??_C@_0BK@DEBEJCDJ@General?5Protection?5Fault?6?$AA@ (`string')
+ 00000006  REL32                      00000000        3D  ?printf@@YAXPBDZZ (void __cdecl printf(char const *,...))
+ 0000000B  DIR32                      00000020         E  ?DumpSpace@@3URegDump@@A (struct RegDump  DumpSpace)
+ 00000011  DIR32                      00000000        3C  ??_C@_09HPIJIFCF@ECODE?5?$CFd?6?$AA@ (`string')
+ 00000016  REL32                      00000000        3D  ?printf@@YAXPBDZZ (void __cdecl printf(char const *,...))
+ 0000001C  DIR32                      00000024         E  ?DumpSpace@@3URegDump@@A (struct RegDump  DumpSpace)
+ 00000022  DIR32                      00000028         E  ?DumpSpace@@3URegDump@@A (struct RegDump  DumpSpace)
+ 00000029  DIR32                      00000000        39  ??_C@_0O@NAPKEEAF@CS?3EIP?5?$CFd?3?$CFd?6?$AA@ (`string')
+ 0000002E  REL32                      00000000        3D  ?printf@@YAXPBDZZ (void __cdecl printf(char const *,...))
+ 00000033  DIR32                      0000002C         E  ?DumpSpace@@3URegDump@@A (struct RegDump  DumpSpace)
+ 00000039  DIR32                      00000000        36  ??_C@_09LKOKBINO@FLAGS?5?$CFd?6?$AA@ (`string')
+ 0000003E  REL32                      00000000        3D  ?printf@@YAXPBDZZ (void __cdecl printf(char const *,...))
+ 00000043  DIR32                      00000000        33  ??_C@_0P@KNMBDACL@Register?5Dump?6?$AA@ (`string')
+ 00000048  REL32                      00000000        3D  ?printf@@YAXPBDZZ (void __cdecl printf(char const *,...))
+ 0000004E  DIR32                      0000000C         E  ?DumpSpace@@3URegDump@@A (struct RegDump  DumpSpace)
+ 00000054  DIR32                      00000008         E  ?DumpSpace@@3URegDump@@A (struct RegDump  DumpSpace)
+ 00000059  DIR32                      00000004         E  ?DumpSpace@@3URegDump@@A (struct RegDump  DumpSpace)
+ 00000060  DIR32                      00000000         E  ?DumpSpace@@3URegDump@@A (struct RegDump  DumpSpace)
+ 00000068  DIR32                      00000000        30  ??_C@_0CK@PEINGJCK@EAX?3?5?$CFd?5?5?5?5EBX?3?5?$CFd?5?5?5?5ECX?3?5?$CFd?5?5?5@ (`string')
+ 0000006D  REL32                      00000000        3D  ?printf@@YAXPBDZZ (void __cdecl printf(char const *,...))
+ 00000073  DIR32                      0000001C         E  ?DumpSpace@@3URegDump@@A (struct RegDump  DumpSpace)
+ 00000078  DIR32                      00000018         E  ?DumpSpace@@3URegDump@@A (struct RegDump  DumpSpace)
+ 0000007E  DIR32                      00000014         E  ?DumpSpace@@3URegDump@@A (struct RegDump  DumpSpace)
+ 00000085  DIR32                      00000010         E  ?DumpSpace@@3URegDump@@A (struct RegDump  DumpSpace)
+ 0000008D  DIR32                      00000000        2D  ??_C@_0CK@HNOEPFBO@EDI?3?5?$CFd?5?5?5?5ESI?3?5?$CFd?5?5?5?5EBP?3?5?$CFd?5?5?5@ (`string')
+ 00000092  REL32                      00000000        3D  ?printf@@YAXPBDZZ (void __cdecl printf(char const *,...))
+
+LINENUMBERS #8
+
+ Symbol index:       29 Base line number:    51
+ Symbol name = ?Exception13_CPP@@YAXXZ (void __cdecl Exception13_CPP(void))
+ 00000000(   54)  0000000A(   55)  0000001A(   56)  00000032(   57)
+ 00000042(   59)  0000004C(   60)  00000071(   61)  00000099(   71)
+ 000000A0(   68)
+
+SECTION HEADER #9
+.debug$S name
+       0 physical address
+       0 virtual address
+      73 size of raw data
+     D25 file pointer to raw data
+     D98 file pointer to relocation table
+       0 file pointer to line numbers
+       3 number of relocations
+       0 number of line numbers
+42101040 flags
+         Initialized Data
+         Communal (no symbol)
+         Discardable
+         1 byte align
+         Read Only
+
+RAW DATA #9
+  00000000: 04 00 00 00 F5 00 00 00 24 00 00 00 00 00 00 00  ....õ...$.......
+  00000010: 00 00 00 00 A2 00 00 00 00 00 00 00 00 00 00 00  ....¢...........
+  00000020: 00 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00  ................
+  00000030: F1 00 00 00 00 00 00 00 35 00 10 11 00 00 00 00  ñ.......5.......
+  00000040: 00 00 00 00 00 00 00 00 A2 00 00 00 00 00 00 00  ........¢.......
+  00000050: 00 00 00 00 34 10 00 00 00 00 00 00 00 00 00 45  ....4..........E
+  00000060: 78 63 65 70 74 69 6F 6E 31 33 5F 43 50 50 00 02  xception13_CPP..
+  00000070: 00 06 00                                         ...
+
+RELOCATIONS #9
+                                                Symbol    Symbol
+ Offset    Type              Applied To         Index     Name
+ --------  ----------------  -----------------  --------  ------
+ 0000000C  DIR32NB                    00000000        29  ?Exception13_CPP@@YAXXZ (void __cdecl Exception13_CPP(void))
+ 00000058  SECREL                     00000000        29  ?Exception13_CPP@@YAXXZ (void __cdecl Exception13_CPP(void))
+ 0000005C  SECTION                        0000        29  ?Exception13_CPP@@YAXXZ (void __cdecl Exception13_CPP(void))
+
+SECTION HEADER #A
+  .rdata name
+       0 physical address
+       0 virtual address
+      2A size of raw data
+     DB6 file pointer to raw data
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+40301040 flags
+         Initialized Data
+         Communal; sym= "`string'" (??_C@_0CK@HNOEPFBO@EDI?3?5?$CFd?5?5?5?5ESI?3?5?$CFd?5?5?5?5EBP?3?5?$CFd?5?5?5@)
+         4 byte align
+         Read Only
+
+RAW DATA #A
+  00000000: 45 44 49 3A 20 25 64 20 20 20 20 45 53 49 3A 20  EDI: %d    ESI: 
+  00000010: 25 64 20 20 20 20 45 42 50 3A 20 25 64 20 20 20  %d    EBP: %d   
+  00000020: 20 45 53 50 3A 20 25 64 0A 00                     ESP: %d..
+
+SECTION HEADER #B
+  .rdata name
+       0 physical address
+       0 virtual address
+      2A size of raw data
+     DE0 file pointer to raw data
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+40301040 flags
+         Initialized Data
+         Communal; sym= "`string'" (??_C@_0CK@PEINGJCK@EAX?3?5?$CFd?5?5?5?5EBX?3?5?$CFd?5?5?5?5ECX?3?5?$CFd?5?5?5@)
+         4 byte align
+         Read Only
+
+RAW DATA #B
+  00000000: 45 41 58 3A 20 25 64 20 20 20 20 45 42 58 3A 20  EAX: %d    EBX: 
+  00000010: 25 64 20 20 20 20 45 43 58 3A 20 25 64 20 20 20  %d    ECX: %d   
+  00000020: 20 45 44 58 3A 20 25 64 0A 00                     EDX: %d..
+
+SECTION HEADER #C
+  .rdata name
+       0 physical address
+       0 virtual address
+       F size of raw data
+     E0A file pointer to raw data
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+40301040 flags
+         Initialized Data
+         Communal; sym= "`string'" (??_C@_0P@KNMBDACL@Register?5Dump?6?$AA@)
+         4 byte align
+         Read Only
+
+RAW DATA #C
+  00000000: 52 65 67 69 73 74 65 72 20 44 75 6D 70 0A 00     Register Dump..
+
+SECTION HEADER #D
+  .rdata name
+       0 physical address
+       0 virtual address
+       A size of raw data
+     E19 file pointer to raw data
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+40301040 flags
+         Initialized Data
+         Communal; sym= "`string'" (??_C@_09LKOKBINO@FLAGS?5?$CFd?6?$AA@)
+         4 byte align
+         Read Only
+
+RAW DATA #D
+  00000000: 46 4C 41 47 53 20 25 64 0A 00                    FLAGS %d..
+
+SECTION HEADER #E
+  .rdata name
+       0 physical address
+       0 virtual address
+       E size of raw data
+     E23 file pointer to raw data
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+40301040 flags
+         Initialized Data
+         Communal; sym= "`string'" (??_C@_0O@NAPKEEAF@CS?3EIP?5?$CFd?3?$CFd?6?$AA@)
+         4 byte align
+         Read Only
+
+RAW DATA #E
+  00000000: 43 53 3A 45 49 50 20 25 64 3A 25 64 0A 00        CS:EIP %d:%d..
+
+SECTION HEADER #F
+  .rdata name
+       0 physical address
+       0 virtual address
+       A size of raw data
+     E31 file pointer to raw data
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+40301040 flags
+         Initialized Data
+         Communal; sym= "`string'" (??_C@_09HPIJIFCF@ECODE?5?$CFd?6?$AA@)
+         4 byte align
+         Read Only
+
+RAW DATA #F
+  00000000: 45 43 4F 44 45 20 25 64 0A 00                    ECODE %d..
+
+SECTION HEADER #10
+  .rdata name
+       0 physical address
+       0 virtual address
+      1A size of raw data
+     E3B file pointer to raw data
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+40301040 flags
+         Initialized Data
+         Communal; sym= "`string'" (??_C@_0BK@DEBEJCDJ@General?5Protection?5Fault?6?$AA@)
+         4 byte align
+         Read Only
+
+RAW DATA #10
+  00000000: 47 65 6E 65 72 61 6C 20 50 72 6F 74 65 63 74 69  General Protecti
+  00000010: 6F 6E 20 46 61 75 6C 74 0A 00                    on Fault..
+
+SECTION HEADER #11
+.debug$F name
+       0 physical address
+       0 virtual address
+      10 size of raw data
+     E55 file pointer to raw data
+     E65 file pointer to relocation table
+       0 file pointer to line numbers
+       1 number of relocations
+       0 number of line numbers
+42101040 flags
+         Initialized Data
+         Communal (no symbol)
+         Discardable
+         1 byte align
+         Read Only
+
+RAW DATA #11
+  00000000: 00 00 00 00 A2 00 00 00 00 00 00 00 00 00 00 00  ....¢...........
+
+FPO Data (1)
+                                             Use Has  Frame
+ RVA      Proc Size   Locals  Regs   Prolog  BP  SEH  Type   Params
+ 00000000       162        0     0        0   N   N    fpo        0
+
+RELOCATIONS #11
+                                                Symbol    Symbol
+ Offset    Type              Applied To         Index     Name
+ --------  ----------------  -----------------  --------  ------
+ 00000000  DIR32NB                    00000000        29  ?Exception13_CPP@@YAXXZ (void __cdecl Exception13_CPP(void))
+
+SECTION HEADER #12
+   .text name
+       0 physical address
+       0 virtual address
+      10 size of raw data
+     E6F file pointer to raw data
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+60501020 flags
+         Code
+         Communal; sym= "public: __thiscall ProcessQueue::ProcessQueue(void)" (??0ProcessQueue@@QAE@XZ)
+         16 byte align
+         Execute Read
+
+RAW DATA #12
+  00000000: 8B C1 C7 00 00 00 00 00 C3 90 90 90 90 90 90 90  ‹ÁÇ.....Ã.......
+
+SECTION HEADER #13
+.debug$S name
+       0 physical address
+       0 virtual address
+      8D size of raw data
+     E7F file pointer to raw data
+     F0C file pointer to relocation table
+       0 file pointer to line numbers
+       3 number of relocations
+       0 number of line numbers
+42101040 flags
+         Initialized Data
+         Communal (no symbol)
+         Discardable
+         1 byte align
+         Read Only
+
+RAW DATA #13
+  00000000: 04 00 00 00 F5 00 00 00 24 00 00 00 00 00 00 00  ....õ...$.......
+  00000010: 00 00 00 00 09 00 00 00 00 00 00 00 00 00 00 00  ................
+  00000020: 00 00 00 00 00 00 00 00 02 00 00 00 04 00 00 00  ................
+  00000030: F1 00 00 00 00 00 00 00 40 00 10 11 00 00 00 00  ñ.......@.......
+  00000040: 00 00 00 00 00 00 00 00 09 00 00 00 02 00 00 00  ................
+  00000050: 08 00 00 00 56 10 00 00 00 00 00 00 00 00 00 50  ....V..........P
+  00000060: 72 6F 63 65 73 73 51 75 65 75 65 3A 3A 50 72 6F  rocessQueue::Pro
+  00000070: 63 65 73 73 51 75 65 75 65 00 0D 00 06 11 53 10  cessQueue.....S.
+  00000080: 00 00 12 00 74 68 69 73 00 02 00 06 00           ....this.....
+
+RELOCATIONS #13
+                                                Symbol    Symbol
+ Offset    Type              Applied To         Index     Name
+ --------  ----------------  -----------------  --------  ------
+ 0000000C  DIR32NB                    00000000        4C  ??0ProcessQueue@@QAE@XZ (public: __thiscall ProcessQueue::ProcessQueue(void))
+ 00000058  SECREL                     00000000        4C  ??0ProcessQueue@@QAE@XZ (public: __thiscall ProcessQueue::ProcessQueue(void))
+ 0000005C  SECTION                        0000        4C  ??0ProcessQueue@@QAE@XZ (public: __thiscall ProcessQueue::ProcessQueue(void))
+
+SECTION HEADER #14
+.debug$F name
+       0 physical address
+       0 virtual address
+      10 size of raw data
+     F2A file pointer to raw data
+     F3A file pointer to relocation table
+       0 file pointer to line numbers
+       1 number of relocations
+       0 number of line numbers
+42101040 flags
+         Initialized Data
+         Communal (no symbol)
+         Discardable
+         1 byte align
+         Read Only
+
+RAW DATA #14
+  00000000: 00 00 00 00 09 00 00 00 00 00 00 00 00 00 02 00  ................
+
+FPO Data (1)
+                                             Use Has  Frame
+ RVA      Proc Size   Locals  Regs   Prolog  BP  SEH  Type   Params
+ 00000000         9        0     0        2   N   N    fpo        0
+
+RELOCATIONS #14
+                                                Symbol    Symbol
+ Offset    Type              Applied To         Index     Name
+ --------  ----------------  -----------------  --------  ------
+ 00000000  DIR32NB                    00000000        4C  ??0ProcessQueue@@QAE@XZ (public: __thiscall ProcessQueue::ProcessQueue(void))
+
+SECTION HEADER #15
+   .text name
+       0 physical address
+       0 virtual address
+     510 size of raw data
+     F44 file pointer to raw data
+    1454 file pointer to relocation table
+    18AA file pointer to line numbers
+      6F number of relocations
+      55 number of line numbers
+60501020 flags
+         Code
+         Communal; sym= "void __cdecl KernelEntry(void)" (?KernelEntry@@YAXXZ)
+         16 byte align
+         Execute Read
+
+RAW DATA #15
+  00000000: 55 8B EC 83 E4 F8 81 EC 08 09 00 00 8D 4C 24 00  U‹ìƒäø.ì.....L$.
+  00000010: E8 00 00 00 00 8D 44 24 00 8D 4C 24 00 A3 00 00  è.....D$..L$.£..
+  00000020: 00 00 E8 00 00 00 00 68 00 00 00 00 8D 4C 24 04  ..è....h.....L$.
+  00000030: E8 00 00 00 00 6A 09 8D 4C 24 04 E8 00 00 00 00  è....j..L$.è....
+  00000040: 68 00 00 00 00 8D 4C 24 04 E8 00 00 00 00 6A 0F  h.....L$.è....j.
+  00000050: 8D 4C 24 04 E8 00 00 00 00 68 00 00 00 00 8D 4C  .L$.è....h.....L
+  00000060: 24 04 E8 00 00 00 00 8B 15 00 00 00 00 B9 00 00  $.è....‹.....¹..
+  00000070: 00 00 81 E1 00 8E FF FF 81 C9 00 8E 00 00 89 4A  ...á.Žÿÿ.É.Ž..‰J
+  00000080: 04 8B 0D 00 00 00 00 B8 00 00 00 00 25 FF FF 00  .‹.....¸....%ÿÿ.
+  00000090: 00 0D 00 00 08 00 89 01 A1 00 00 00 00 BA 00 00  ......‰.¡....º..
+  000000A0: 00 00 81 E2 00 8E FF FF 81 CA 00 8E 00 00 89 50  ...â.Žÿÿ.Ê.Ž..‰P
+  000000B0: 0C 8B 15 00 00 00 00 B9 00 00 00 00 81 E1 FF FF  .‹.....¹.....áÿÿ
+  000000C0: 00 00 81 C9 00 00 08 00 89 4A 08 8B 0D 00 00 00  ...É....‰J.‹....
+  000000D0: 00 B8 00 00 00 00 25 00 8E FF FF 0D 00 8E 00 00  .¸....%.Žÿÿ..Ž..
+  000000E0: 89 41 14 A1 00 00 00 00 BA 00 00 00 00 81 E2 FF  ‰A.¡....º.....âÿ
+  000000F0: FF 00 00 81 CA 00 00 08 00 89 50 10 8B 15 00 00  ÿ...Ê....‰P.‹...
+  00000100: 00 00 B9 00 00 00 00 81 E1 00 8E FF FF 81 C9 00  ..¹.....á.Žÿÿ.É.
+  00000110: 8E 00 00 89 4A 1C 8B 0D 00 00 00 00 B8 00 00 00  Ž..‰J.‹.....¸...
+  00000120: 00 25 FF FF 00 00 0D 00 00 08 00 89 41 18 A1 00  .%ÿÿ.......‰A.¡.
+  00000130: 00 00 00 BA 00 00 00 00 81 E2 00 8E FF FF 81 CA  ...º.....â.Žÿÿ.Ê
+  00000140: 00 8E 00 00 89 50 24 8B 15 00 00 00 00 B9 00 00  .Ž..‰P$‹.....¹..
+  00000150: 00 00 81 E1 FF FF 00 00 81 C9 00 00 08 00 89 4A  ...áÿÿ...É....‰J
+  00000160: 20 8B 0D 00 00 00 00 B8 00 00 00 00 25 00 8E FF   ‹.....¸....%.Žÿ
+  00000170: FF 0D 00 8E 00 00 BA 00 00 00 00 89 41 2C A1 00  ÿ..Ž..º....‰A,¡.
+  00000180: 00 00 00 81 E2 FF FF 00 00 81 CA 00 00 08 00 89  ....âÿÿ...Ê....‰
+  00000190: 50 28 8B 15 00 00 00 00 B9 00 00 00 00 81 E1 00  P(‹.....¹.....á.
+  000001A0: 8E FF FF 81 C9 00 8E 00 00 89 4A 34 8B 0D 00 00  Žÿÿ.É.Ž..‰J4‹...
+  000001B0: 00 00 B8 00 00 00 00 25 FF FF 00 00 0D 00 00 08  ..¸....%ÿÿ......
+  000001C0: 00 89 41 30 A1 00 00 00 00 BA 00 00 00 00 81 E2  .‰A0¡....º.....â
+  000001D0: 00 8E FF FF 81 CA 00 8E 00 00 89 50 3C 8B 15 00  .Žÿÿ.Ê.Ž..‰P<‹..
+  000001E0: 00 00 00 B9 00 00 00 00 81 E1 FF FF 00 00 81 C9  ...¹.....áÿÿ...É
+  000001F0: 00 00 08 00 89 4A 38 8B 0D 00 00 00 00 B8 00 00  ....‰J8‹.....¸..
+  00000200: 00 00 25 00 8E FF FF 0D 00 8E 00 00 89 41 44 A1  ..%.Žÿÿ..Ž..‰AD¡
+  00000210: 00 00 00 00 BA 00 00 00 00 81 E2 FF FF 00 00 81  ....º.....âÿÿ...
+  00000220: CA 00 00 08 00 89 50 40 8B 15 00 00 00 00 B9 00  Ê....‰P@‹.....¹.
+  00000230: 00 00 00 81 E1 00 8E FF FF 81 C9 00 8E 00 00 89  ....á.Žÿÿ.É.Ž..‰
+  00000240: 4A 4C 8B 0D 00 00 00 00 B8 00 00 00 00 25 FF FF  JL‹.....¸....%ÿÿ
+  00000250: 00 00 0D 00 00 08 00 89 41 48 A1 00 00 00 00 BA  .......‰AH¡....º
+  00000260: 00 00 00 00 81 E2 00 8E FF FF 81 CA 00 8E 00 00  .....â.Žÿÿ.Ê.Ž..
+  00000270: 89 50 54 8B 15 00 00 00 00 B9 00 00 00 00 81 E1  ‰PT‹.....¹.....á
+  00000280: FF FF 00 00 81 C9 00 00 08 00 89 4A 50 8B 0D 00  ÿÿ...É....‰JP‹..
+  00000290: 00 00 00 B8 00 00 00 00 25 00 8E FF FF 0D 00 8E  ...¸....%.Žÿÿ..Ž
+  000002A0: 00 00 89 41 5C A1 00 00 00 00 BA 00 00 00 00 81  ..‰A\¡....º.....
+  000002B0: E2 FF FF 00 00 81 CA 00 00 08 00 89 50 58 8B 15  âÿÿ...Ê....‰PX‹.
+  000002C0: 00 00 00 00 B9 00 00 00 00 81 E1 00 8E FF FF 81  ....¹.....á.Žÿÿ.
+  000002D0: C9 00 8E 00 00 89 4A 64 8B 0D 00 00 00 00 B8 00  É.Ž..‰Jd‹.....¸.
+  000002E0: 00 00 00 25 FF FF 00 00 0D 00 00 08 00 89 41 60  ...%ÿÿ.......‰A`
+  000002F0: A1 00 00 00 00 BA 00 00 00 00 81 E2 00 8E FF FF  ¡....º.....â.Žÿÿ
+  00000300: 81 CA 00 8E 00 00 B9 00 00 00 00 89 50 6C 8B 15  .Ê.Ž..¹....‰Pl‹.
+  00000310: 00 00 00 00 81 E1 FF FF 00 00 81 C9 00 00 08 00  .....áÿÿ...É....
+  00000320: 89 4A 68 B8 00 00 00 00 8B 0D 00 00 00 00 25 00  ‰Jh¸....‹.....%.
+  00000330: 8E FF FF 0D 00 8E 00 00 89 41 74 A1 00 00 00 00  Žÿÿ..Ž..‰At¡....
+  00000340: BA 00 00 00 00 81 E2 FF FF 00 00 81 CA 00 00 08  º.....âÿÿ...Ê...
+  00000350: 00 68 00 00 00 00 8D 4C 24 04 89 50 70 E8 00 00  .h.....L$.‰Ppè..
+  00000360: 00 00 68 00 00 00 00 8D 4C 24 04 E8 00 00 00 00  ..h.....L$.è....
+  00000370: 8B 15 00 00 00 00 B9 00 00 00 00 C1 E1 10 83 C9  ‹.....¹....Áá.ƒÉ
+  00000380: 68 89 4A 18 8B 15 00 00 00 00 B8 00 00 00 00 25  h‰J.‹.....¸....%
+  00000390: 00 00 FF 00 0D FF FF 00 8B B9 00 00 00 00 C1 E8  ..ÿ..ÿÿ.‹¹....Áè
+  000003A0: 10 81 E1 00 8B 00 FF 0B C1 89 42 1C 66 50 66 B8  ..á.‹.ÿ.Á‰B.fPf¸
+  000003B0: 18 00 0F 00 D8 66 58 8B 0D 00 00 00 00 B8 00 00  ....ØfX‹.....¸..
+  000003C0: 00 00 C1 E0 10 83 C8 68 89 41 20 8B 0D 00 00 00  ..Áà.ƒÈh‰A ‹....
+  000003D0: 00 BA 00 00 00 00 81 E2 00 00 FF 00 81 CA FF FF  .º.....â..ÿ..Êÿÿ
+  000003E0: 00 89 B8 00 00 00 00 25 00 89 00 FF C1 EA 10 0B  .‰¸....%.‰.ÿÁê..
+  000003F0: D0 89 51 24 B8 10 00 00 00 68 00 00 00 00 8D 4C  Ð‰Q$¸....h.....L
+  00000400: 24 04 66 A3 50 00 00 00 66 C7 05 4C 00 00 00 08  $.f£P...fÇ.L....
+  00000410: 00 66 A3 54 00 00 00 66 A3 48 00 00 00 66 A3 58  .f£T...f£H...f£X
+  00000420: 00 00 00 66 A3 5C 00 00 00 C7 05 38 00 00 00 FF  ...f£\...Ç.8...ÿ
+  00000430: 03 00 00 C7 05 20 00 00 00 00 00 00 00 E8 00 00  ...Ç. .......è..
+  00000440: 00 00 68 00 00 00 00 8D 4C 24 04 E8 00 00 00 00  ..h.....L$.è....
+  00000450: A1 00 00 00 00 BA 00 00 00 00 81 E2 00 8E FF FF  ¡....º.....â.Žÿÿ
+  00000460: 81 CA 00 8E 00 00 89 90 0C 01 00 00 8B 15 00 00  .Ê.Ž..‰.....‹...
+  00000470: 00 00 B9 00 00 00 00 81 E1 FF FF 00 00 81 C9 00  ..¹.....áÿÿ...É.
+  00000480: 00 08 00 89 8A 08 01 00 00 A1 00 00 00 00 C7 80  ...‰Š....¡....Ç€
+  00000490: 04 01 00 00 50 08 00 00 8B 0D 00 00 00 00 C7 81  ....P...‹.....Ç.
+  000004A0: 00 01 00 00 00 00 20 00 68 00 00 00 00 8D 4C 24  ...... .h.....L$
+  000004B0: 04 E8 00 00 00 00 68 00 00 00 00 8D 4C 24 04 E8  .è....h.....L$.è
+  000004C0: 00 00 00 00 B0 11 E6 20 E6 A0 B0 20 E6 21 B0 28  ....°.æ æ ° æ!°(
+  000004D0: E6 A1 B0 04 E6 21 B0 02 E6 A1 B0 01 E6 21 E6 A1  æ¡°.æ!°.æ¡°.æ!æ¡
+  000004E0: B0 37 E6 44 B0 95 E6 40 B0 2E E6 40 B0 FC E6 21  °7æD°•æ@°.æ@°üæ!
+  000004F0: B0 FF E6 A1 FB 68 00 00 00 00 8D 4C 24 04 E8 00  °ÿæ¡ûh.....L$.è.
+  00000500: 00 00 00 EB FE 90 90 90 90 90 90 90 90 90 90 90  ...ëþ...........
+
+RELOCATIONS #15
+                                                Symbol    Symbol
+ Offset    Type              Applied To         Index     Name
+ --------  ----------------  -----------------  --------  ------
+ 00000011  REL32                      00000000        81  ??0VideoDriver@@QAE@XZ (public: __thiscall VideoDriver::VideoDriver(void))
+ 0000001E  DIR32                      00000000        80  ?pDisp@@3PAVVideoDriver@@A (class VideoDriver *  pDisp)
+ 00000023  REL32                      00000000        7F  ?ClearScreen@VideoDriver@@QAEXXZ (public: void __thiscall VideoDriver::ClearScreen(void))
+ 00000028  DIR32                      00000000        7E  ??_C@_1EA@PCALOENF@?$AAD?$AAi?$AAs?$AAp?$AAl?$AAa?$AAy?$AA?5?$AAI?$AAn?$AAi?$AAt?$AAi?$AAa?$AAl?$AAi?$AAs?$AAe?$AAd?$AA?6@ (`string')
+ 00000031  REL32                      00000000        7B  ?WriteString@VideoDriver@@QAEXPA_W@Z (public: void __thiscall VideoDriver::WriteString(wchar_t *))
+ 0000003C  REL32                      00000000        7A  ?SetColour@VideoDriver@@QAEXE@Z (public: void __thiscall VideoDriver::SetColour(unsigned char))
+ 00000041  DIR32                      00000000        79  ??_C@_1BM@PJPAAICO@?$AAC?$AAa?$AAb?$AAo?$AAo?$AAs?$AAe?$AA?5?$AAv?$AA0?$AA?4?$AA0?$AA?6?$AA?$AA@ (`string')
+ 0000004A  REL32                      00000000        7B  ?WriteString@VideoDriver@@QAEXPA_W@Z (public: void __thiscall VideoDriver::WriteString(wchar_t *))
+ 00000055  REL32                      00000000        7A  ?SetColour@VideoDriver@@QAEXE@Z (public: void __thiscall VideoDriver::SetColour(unsigned char))
+ 0000005A  DIR32                      00000000        76  ??_C@_1FC@OADJIDMP@?$AAS?$AAe?$AAt?$AAt?$AAi?$AAn?$AAg?$AA?5?$AAu?$AAp?$AA?5?$AAI?$AAD?$AAT?$AA?5?$AA?$CI?$AAE?$AAx?$AAc?$AAe@ (`string')
+ 00000063  REL32                      00000000        7B  ?WriteString@VideoDriver@@QAEXPA_W@Z (public: void __thiscall VideoDriver::WriteString(wchar_t *))
+ 00000069  DIR32                      00000000        73  ?IDTAddress@@3PAKA (unsigned long *  IDTAddress)
+ 0000006E  DIR32                      00000000        72  ?Exception0@@YAXXZ (void __cdecl Exception0(void))
+ 00000083  DIR32                      00000000        73  ?IDTAddress@@3PAKA (unsigned long *  IDTAddress)
+ 00000088  DIR32                      00000000        72  ?Exception0@@YAXXZ (void __cdecl Exception0(void))
+ 00000099  DIR32                      00000000        73  ?IDTAddress@@3PAKA (unsigned long *  IDTAddress)
+ 0000009E  DIR32                      00000000        71  ?Exception1@@YAXXZ (void __cdecl Exception1(void))
+ 000000B3  DIR32                      00000000        73  ?IDTAddress@@3PAKA (unsigned long *  IDTAddress)
+ 000000B8  DIR32                      00000000        71  ?Exception1@@YAXXZ (void __cdecl Exception1(void))
+ 000000CD  DIR32                      00000000        73  ?IDTAddress@@3PAKA (unsigned long *  IDTAddress)
+ 000000D2  DIR32                      00000000        70  ?Exception2@@YAXXZ (void __cdecl Exception2(void))
+ 000000E4  DIR32                      00000000        73  ?IDTAddress@@3PAKA (unsigned long *  IDTAddress)
+ 000000E9  DIR32                      00000000        70  ?Exception2@@YAXXZ (void __cdecl Exception2(void))
+ 000000FE  DIR32                      00000000        73  ?IDTAddress@@3PAKA (unsigned long *  IDTAddress)
+ 00000103  DIR32                      00000000        6F  ?Exception3@@YAXXZ (void __cdecl Exception3(void))
+ 00000118  DIR32                      00000000        73  ?IDTAddress@@3PAKA (unsigned long *  IDTAddress)
+ 0000011D  DIR32                      00000000        6F  ?Exception3@@YAXXZ (void __cdecl Exception3(void))
+ 0000012F  DIR32                      00000000        73  ?IDTAddress@@3PAKA (unsigned long *  IDTAddress)
+ 00000134  DIR32                      00000000        6E  ?Exception4@@YAXXZ (void __cdecl Exception4(void))
+ 00000149  DIR32                      00000000        73  ?IDTAddress@@3PAKA (unsigned long *  IDTAddress)
+ 0000014E  DIR32                      00000000        6E  ?Exception4@@YAXXZ (void __cdecl Exception4(void))
+ 00000163  DIR32                      00000000        73  ?IDTAddress@@3PAKA (unsigned long *  IDTAddress)
+ 00000168  DIR32                      00000000        6D  ?Exception5@@YAXXZ (void __cdecl Exception5(void))
+ 00000177  DIR32                      00000000        6D  ?Exception5@@YAXXZ (void __cdecl Exception5(void))
+ 0000017F  DIR32                      00000000        73  ?IDTAddress@@3PAKA (unsigned long *  IDTAddress)
+ 00000194  DIR32                      00000000        73  ?IDTAddress@@3PAKA (unsigned long *  IDTAddress)
+ 00000199  DIR32                      00000000        6C  ?Exception6@@YAXXZ (void __cdecl Exception6(void))
+ 000001AE  DIR32                      00000000        73  ?IDTAddress@@3PAKA (unsigned long *  IDTAddress)
+ 000001B3  DIR32                      00000000        6C  ?Exception6@@YAXXZ (void __cdecl Exception6(void))
+ 000001C5  DIR32                      00000000        73  ?IDTAddress@@3PAKA (unsigned long *  IDTAddress)
+ 000001CA  DIR32                      00000000        6B  ?Exception7@@YAXXZ (void __cdecl Exception7(void))
+ 000001DF  DIR32                      00000000        73  ?IDTAddress@@3PAKA (unsigned long *  IDTAddress)
+ 000001E4  DIR32                      00000000        6B  ?Exception7@@YAXXZ (void __cdecl Exception7(void))
+ 000001F9  DIR32                      00000000        73  ?IDTAddress@@3PAKA (unsigned long *  IDTAddress)
+ 000001FE  DIR32                      00000000        6A  ?Exception8@@YAXXZ (void __cdecl Exception8(void))
+ 00000210  DIR32                      00000000        73  ?IDTAddress@@3PAKA (unsigned long *  IDTAddress)
+ 00000215  DIR32                      00000000        6A  ?Exception8@@YAXXZ (void __cdecl Exception8(void))
+ 0000022A  DIR32                      00000000        73  ?IDTAddress@@3PAKA (unsigned long *  IDTAddress)
+ 0000022F  DIR32                      00000000        69  ?Exception9@@YAXXZ (void __cdecl Exception9(void))
+ 00000244  DIR32                      00000000        73  ?IDTAddress@@3PAKA (unsigned long *  IDTAddress)
+ 00000249  DIR32                      00000000        69  ?Exception9@@YAXXZ (void __cdecl Exception9(void))
+ 0000025B  DIR32                      00000000        73  ?IDTAddress@@3PAKA (unsigned long *  IDTAddress)
+ 00000260  DIR32                      00000000        68  ?Exception10@@YAXXZ (void __cdecl Exception10(void))
+ 00000275  DIR32                      00000000        73  ?IDTAddress@@3PAKA (unsigned long *  IDTAddress)
+ 0000027A  DIR32                      00000000        68  ?Exception10@@YAXXZ (void __cdecl Exception10(void))
+ 0000028F  DIR32                      00000000        73  ?IDTAddress@@3PAKA (unsigned long *  IDTAddress)
+ 00000294  DIR32                      00000000        67  ?Exception11@@YAXXZ (void __cdecl Exception11(void))
+ 000002A6  DIR32                      00000000        73  ?IDTAddress@@3PAKA (unsigned long *  IDTAddress)
+ 000002AB  DIR32                      00000000        67  ?Exception11@@YAXXZ (void __cdecl Exception11(void))
+ 000002C0  DIR32                      00000000        73  ?IDTAddress@@3PAKA (unsigned long *  IDTAddress)
+ 000002C5  DIR32                      00000000        66  ?Exception12@@YAXXZ (void __cdecl Exception12(void))
+ 000002DA  DIR32                      00000000        73  ?IDTAddress@@3PAKA (unsigned long *  IDTAddress)
+ 000002DF  DIR32                      00000000        66  ?Exception12@@YAXXZ (void __cdecl Exception12(void))
+ 000002F1  DIR32                      00000000        73  ?IDTAddress@@3PAKA (unsigned long *  IDTAddress)
+ 000002F6  DIR32                      00000000        65  ?Exception13@@YAXXZ (void __cdecl Exception13(void))
+ 00000307  DIR32                      00000000        65  ?Exception13@@YAXXZ (void __cdecl Exception13(void))
+ 00000310  DIR32                      00000000        73  ?IDTAddress@@3PAKA (unsigned long *  IDTAddress)
+ 00000324  DIR32                      00000000        64  ?Exception14@@YAXXZ (void __cdecl Exception14(void))
+ 0000032A  DIR32                      00000000        73  ?IDTAddress@@3PAKA (unsigned long *  IDTAddress)
+ 0000033C  DIR32                      00000000        73  ?IDTAddress@@3PAKA (unsigned long *  IDTAddress)
+ 00000341  DIR32                      00000000        64  ?Exception14@@YAXXZ (void __cdecl Exception14(void))
+ 00000352  DIR32                      00000000        63  ??_C@_1M@GFEGCGOG@?$AAD?$AAo?$AAn?$AAe?$AA?6?$AA?$AA@ (`string')
+ 0000035E  REL32                      00000000        7B  ?WriteString@VideoDriver@@QAEXPA_W@Z (public: void __thiscall VideoDriver::WriteString(wchar_t *))
+ 00000363  DIR32                      00000000        60  ??_C@_1FA@KFBANILN@?$AAS?$AAe?$AAt?$AAt?$AAi?$AAn?$AAg?$AA?5?$AAI?$AAn?$AAi?$AAt?$AAi?$AAa?$AAl?$AA?5?$AAT?$AAS?$AAS?$AA?5@ (`string')
+ 0000036C  REL32                      00000000        7B  ?WriteString@VideoDriver@@QAEXPA_W@Z (public: void __thiscall VideoDriver::WriteString(wchar_t *))
+ 00000372  DIR32                      00000000        5D  ?GDTAddress@@3PAKA (unsigned long *  GDTAddress)
+ 00000377  DIR32                      00000000         F  ?GlobalTSS@@3UTSS@@A (struct TSS  GlobalTSS)
+ 00000386  DIR32                      00000000        5D  ?GDTAddress@@3PAKA (unsigned long *  GDTAddress)
+ 0000038B  DIR32                      00000000         F  ?GlobalTSS@@3UTSS@@A (struct TSS  GlobalTSS)
+ 0000039A  DIR32                      00000000         F  ?GlobalTSS@@3UTSS@@A (struct TSS  GlobalTSS)
+ 000003B9  DIR32                      00000000        5D  ?GDTAddress@@3PAKA (unsigned long *  GDTAddress)
+ 000003BE  DIR32                      00000000         C  ?DispatchTSS@@3UTSS@@A (struct TSS  DispatchTSS)
+ 000003CD  DIR32                      00000000        5D  ?GDTAddress@@3PAKA (unsigned long *  GDTAddress)
+ 000003D2  DIR32                      00000000         C  ?DispatchTSS@@3UTSS@@A (struct TSS  DispatchTSS)
+ 000003E3  DIR32                      00000000         C  ?DispatchTSS@@3UTSS@@A (struct TSS  DispatchTSS)
+ 000003FA  DIR32                      00000000        63  ??_C@_1M@GFEGCGOG@?$AAD?$AAo?$AAn?$AAe?$AA?6?$AA?$AA@ (`string')
+ 00000404  DIR32                      00000050         C  ?DispatchTSS@@3UTSS@@A (struct TSS  DispatchTSS)
+ 0000040B  DIR32                      0000004C         C  ?DispatchTSS@@3UTSS@@A (struct TSS  DispatchTSS)
+ 00000413  DIR32                      00000054         C  ?DispatchTSS@@3UTSS@@A (struct TSS  DispatchTSS)
+ 00000419  DIR32                      00000048         C  ?DispatchTSS@@3UTSS@@A (struct TSS  DispatchTSS)
+ 0000041F  DIR32                      00000058         C  ?DispatchTSS@@3UTSS@@A (struct TSS  DispatchTSS)
+ 00000425  DIR32                      0000005C         C  ?DispatchTSS@@3UTSS@@A (struct TSS  DispatchTSS)
+ 0000042B  DIR32                      00000038         C  ?DispatchTSS@@3UTSS@@A (struct TSS  DispatchTSS)
+ 0000042F  DIR32                      000003FF         D  ?DispatchStack@@3PAEA (unsigned char *  DispatchStack)
+ 00000435  DIR32                      00000020         C  ?DispatchTSS@@3UTSS@@A (struct TSS  DispatchTSS)
+ 00000439  DIR32                      00000000        5C  ?RawISR@TimerDriver@@SAXXZ (public: static void __cdecl TimerDriver::RawISR(void))
+ 0000043E  REL32                      00000000        7B  ?WriteString@VideoDriver@@QAEXPA_W@Z (public: void __thiscall VideoDriver::WriteString(wchar_t *))
+ 00000443  DIR32                      00000000        5B  ??_C@_1FC@HJFAKFNI@?$AAS?$AAe?$AAt?$AAt?$AAi?$AAn?$AAg?$AA?5?$AAu?$AAp?$AA?5?$AAI?$AAD?$AAT?$AA?5?$AA?$CI?$AAI?$AAn?$AAt?$AAe@ (`string')
+ 0000044C  REL32                      00000000        7B  ?WriteString@VideoDriver@@QAEXPA_W@Z (public: void __thiscall VideoDriver::WriteString(wchar_t *))
+ 00000451  DIR32                      00000000        73  ?IDTAddress@@3PAKA (unsigned long *  IDTAddress)
+ 00000456  DIR32                      00000000        58  ?RawISR@KeyboardDriver@@SAXXZ (public: static void __cdecl KeyboardDriver::RawISR(void))
+ 0000046E  DIR32                      00000000        73  ?IDTAddress@@3PAKA (unsigned long *  IDTAddress)
+ 00000473  DIR32                      00000000        58  ?RawISR@KeyboardDriver@@SAXXZ (public: static void __cdecl KeyboardDriver::RawISR(void))
+ 0000048A  DIR32                      00000000        73  ?IDTAddress@@3PAKA (unsigned long *  IDTAddress)
+ 0000049A  DIR32                      00000000        73  ?IDTAddress@@3PAKA (unsigned long *  IDTAddress)
+ 000004A9  DIR32                      00000000        63  ??_C@_1M@GFEGCGOG@?$AAD?$AAo?$AAn?$AAe?$AA?6?$AA?$AA@ (`string')
+ 000004B2  REL32                      00000000        7B  ?WriteString@VideoDriver@@QAEXPA_W@Z (public: void __thiscall VideoDriver::WriteString(wchar_t *))
+ 000004B7  DIR32                      00000000        57  ??_C@_1EC@KNNFMMNH@?$AAE?$AAn?$AAa?$AAb?$AAl?$AAe?$AA?5?$AAP?$AAI?$AAC?$AA?8?$AAs?$AA?5?$AAa?$AAn?$AAd?$AA?5?$AAi?$AAn?$AAt@ (`string')
+ 000004C0  REL32                      00000000        7B  ?WriteString@VideoDriver@@QAEXPA_W@Z (public: void __thiscall VideoDriver::WriteString(wchar_t *))
+ 000004F6  DIR32                      00000000        63  ??_C@_1M@GFEGCGOG@?$AAD?$AAo?$AAn?$AAe?$AA?6?$AA?$AA@ (`string')
+ 000004FF  REL32                      00000000        7B  ?WriteString@VideoDriver@@QAEXPA_W@Z (public: void __thiscall VideoDriver::WriteString(wchar_t *))
+
+LINENUMBERS #15
+
+ Symbol index:       53 Base line number:    83
+ Symbol name = ?KernelEntry@@YAXXZ (void __cdecl KernelEntry(void))
+ 0000000C(   85)  00000015(   86)  00000019(   87)  00000027(   88)
+ 00000035(   89)  00000040(   90)  0000004E(   91)  00000059(   95)
+ 00000067(   97)  00000081(   98)  00000098(   99)  000000B1(  100)
+ 000000CB(  101)  000000E3(  102)  000000FC(  103)  00000116(  104)
+ 0000012E(  105)  00000147(  106)  00000161(  107)  00000176(  108)
+ 00000192(  109)  000001AC(  110)  000001C4(  111)  000001DD(  112)
+ 000001F7(  113)  0000020F(  114)  00000228(  115)  00000242(  116)
+ 0000025A(  117)  00000273(  118)  0000028D(  119)  000002A5(  120)
+ 000002BE(  121)  000002D8(  122)  000002F0(  123)  00000306(  124)
+ 00000323(  125)  0000033B(  126)  00000351(  162)  00000362(  166)
+ 00000370(  167)  00000384(  168)  000003AC(  171)  000003AE(  172)
+ 000003B2(  173)  000003B5(  174)  000003B7(  178)  000003CB(  179)
+ 000003F4(  180)  000003F9(  190)  00000442(  192)  00000450(  195)
+ 0000046C(  196)  00000489(  199)  00000498(  200)  000004A8(  202)
+ 000004B6(  205)  000004C4(  209)  000004C6(  210)  000004C8(  211)
+ 000004CA(  214)  000004CC(  215)  000004CE(  217)  000004D0(  218)
+ 000004D2(  221)  000004D4(  222)  000004D6(  224)  000004D8(  225)
+ 000004DA(  228)  000004DC(  229)  000004DE(  230)  000004E0(  233)
+ 000004E2(  234)  000004E4(  235)  000004E6(  236)  000004E8(  237)
+ 000004EA(  238)  000004EC(  242)  000004EE(  243)  000004F0(  244)
+ 000004F2(  245)  000004F4(  248)  000004F5(  251)  00000503(  252)
+
+SECTION HEADER #16
+.debug$S name
+       0 physical address
+       0 virtual address
+      B9 size of raw data
+    1AA8 file pointer to raw data
+    1B61 file pointer to relocation table
+       0 file pointer to line numbers
+       3 number of relocations
+       0 number of line numbers
+42101040 flags
+         Initialized Data
+         Communal (no symbol)
+         Discardable
+         1 byte align
+         Read Only
+
+RAW DATA #16
+  00000000: 04 00 00 00 F5 00 00 00 24 00 00 00 00 00 00 00  ....õ...$.......
+  00000010: 00 00 00 00 05 05 00 00 08 09 00 00 00 00 00 00  ................
+  00000020: 00 00 00 00 57 00 00 00 0C 00 00 00 04 00 00 00  ....W...........
+  00000030: F1 00 00 00 00 00 00 00 31 00 10 11 00 00 00 00  ñ.......1.......
+  00000040: 00 00 00 00 00 00 00 00 05 05 00 00 0C 00 00 00  ................
+  00000050: 00 00 00 00 34 10 00 00 00 00 00 00 00 00 01 4B  ....4..........K
+  00000060: 65 72 6E 65 6C 45 6E 74 72 79 00 18 00 0B 11 F8  ernelEntry.....ø
+  00000070: F6 FF FF 4F 10 00 00 69 5F 56 69 64 65 6F 44 72  öÿÿO...i_VideoDr
+  00000080: 69 76 65 72 00 16 00 0B 11 80 FB FF FF 2D 10 00  iver.....€ûÿÿ-..
+  00000090: 00 49 64 6C 65 50 72 6F 63 65 73 73 00 16 00 0B  .IdleProcess....
+  000000A0: 11 00 F7 FF FF 77 10 00 00 49 6E 69 74 50 72 6F  ..÷ÿÿw...InitPro
+  000000B0: 63 65 73 73 00 02 00 06 00                       cess.....
+
+RELOCATIONS #16
+                                                Symbol    Symbol
+ Offset    Type              Applied To         Index     Name
+ --------  ----------------  -----------------  --------  ------
+ 0000000C  DIR32NB                    00000000        53  ?KernelEntry@@YAXXZ (void __cdecl KernelEntry(void))
+ 00000058  SECREL                     00000000        53  ?KernelEntry@@YAXXZ (void __cdecl KernelEntry(void))
+ 0000005C  SECTION                        0000        53  ?KernelEntry@@YAXXZ (void __cdecl KernelEntry(void))
+
+SECTION HEADER #17
+  .rdata name
+       0 physical address
+       0 virtual address
+      42 size of raw data
+    1B7F file pointer to raw data
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+40401040 flags
+         Initialized Data
+         Communal; sym= "`string'" (??_C@_1EC@KNNFMMNH@?$AAE?$AAn?$AAa?$AAb?$AAl?$AAe?$AA?5?$AAP?$AAI?$AAC?$AA?8?$AAs?$AA?5?$AAa?$AAn?$AAd?$AA?5?$AAi?$AAn?$AAt@)
+         8 byte align
+         Read Only
+
+RAW DATA #17
+  00000000: 45 00 6E 00 61 00 62 00 6C 00 65 00 20 00 50 00  E.n.a.b.l.e. .P.
+  00000010: 49 00 43 00 27 00 73 00 20 00 61 00 6E 00 64 00  I.C.'.s. .a.n.d.
+  00000020: 20 00 69 00 6E 00 74 00 65 00 72 00 72 00 75 00   .i.n.t.e.r.r.u.
+  00000030: 70 00 74 00 73 00 20 00 2E 00 2E 00 2E 00 20 00  p.t.s. ....... .
+  00000040: 00 00                                            ..
+
+SECTION HEADER #18
+  .rdata name
+       0 physical address
+       0 virtual address
+      52 size of raw data
+    1BC1 file pointer to raw data
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+40401040 flags
+         Initialized Data
+         Communal; sym= "`string'" (??_C@_1FC@HJFAKFNI@?$AAS?$AAe?$AAt?$AAt?$AAi?$AAn?$AAg?$AA?5?$AAu?$AAp?$AA?5?$AAI?$AAD?$AAT?$AA?5?$AA?$CI?$AAI?$AAn?$AAt?$AAe@)
+         8 byte align
+         Read Only
+
+RAW DATA #18
+  00000000: 53 00 65 00 74 00 74 00 69 00 6E 00 67 00 20 00  S.e.t.t.i.n.g. .
+  00000010: 75 00 70 00 20 00 49 00 44 00 54 00 20 00 28 00  u.p. .I.D.T. .(.
+  00000020: 49 00 6E 00 74 00 65 00 72 00 72 00 75 00 70 00  I.n.t.e.r.r.u.p.
+  00000030: 74 00 20 00 48 00 61 00 6E 00 64 00 6C 00 65 00  t. .H.a.n.d.l.e.
+  00000040: 72 00 73 00 29 00 20 00 2E 00 2E 00 2E 00 20 00  r.s.). ....... .
+  00000050: 00 00                                            ..
+
+SECTION HEADER #19
+  .rdata name
+       0 physical address
+       0 virtual address
+      50 size of raw data
+    1C13 file pointer to raw data
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+40401040 flags
+         Initialized Data
+         Communal; sym= "`string'" (??_C@_1FA@KFBANILN@?$AAS?$AAe?$AAt?$AAt?$AAi?$AAn?$AAg?$AA?5?$AAI?$AAn?$AAi?$AAt?$AAi?$AAa?$AAl?$AA?5?$AAT?$AAS?$AAS?$AA?5@)
+         8 byte align
+         Read Only
+
+RAW DATA #19
+  00000000: 53 00 65 00 74 00 74 00 69 00 6E 00 67 00 20 00  S.e.t.t.i.n.g. .
+  00000010: 49 00 6E 00 69 00 74 00 69 00 61 00 6C 00 20 00  I.n.i.t.i.a.l. .
+  00000020: 54 00 53 00 53 00 20 00 26 00 20 00 44 00 69 00  T.S.S. .&. .D.i.
+  00000030: 73 00 70 00 61 00 74 00 63 00 68 00 20 00 54 00  s.p.a.t.c.h. .T.
+  00000040: 53 00 53 00 20 00 2E 00 2E 00 2E 00 20 00 00 00  S.S. ....... ...
+
+SECTION HEADER #1A
+  .rdata name
+       0 physical address
+       0 virtual address
+       C size of raw data
+    1C63 file pointer to raw data
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+40301040 flags
+         Initialized Data
+         Communal; sym= "`string'" (??_C@_1M@GFEGCGOG@?$AAD?$AAo?$AAn?$AAe?$AA?6?$AA?$AA@)
+         4 byte align
+         Read Only
+
+RAW DATA #1A
+  00000000: 44 00 6F 00 6E 00 65 00 0A 00 00 00              D.o.n.e.....
+
+SECTION HEADER #1B
+  .rdata name
+       0 physical address
+       0 virtual address
+      52 size of raw data
+    1C6F file pointer to raw data
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+40401040 flags
+         Initialized Data
+         Communal; sym= "`string'" (??_C@_1FC@OADJIDMP@?$AAS?$AAe?$AAt?$AAt?$AAi?$AAn?$AAg?$AA?5?$AAu?$AAp?$AA?5?$AAI?$AAD?$AAT?$AA?5?$AA?$CI?$AAE?$AAx?$AAc?$AAe@)
+         8 byte align
+         Read Only
+
+RAW DATA #1B
+  00000000: 53 00 65 00 74 00 74 00 69 00 6E 00 67 00 20 00  S.e.t.t.i.n.g. .
+  00000010: 75 00 70 00 20 00 49 00 44 00 54 00 20 00 28 00  u.p. .I.D.T. .(.
+  00000020: 45 00 78 00 63 00 65 00 70 00 74 00 69 00 6F 00  E.x.c.e.p.t.i.o.
+  00000030: 6E 00 20 00 48 00 61 00 6E 00 64 00 6C 00 65 00  n. .H.a.n.d.l.e.
+  00000040: 72 00 73 00 29 00 20 00 2E 00 2E 00 2E 00 20 00  r.s.). ....... .
+  00000050: 00 00                                            ..
+
+SECTION HEADER #1C
+  .rdata name
+       0 physical address
+       0 virtual address
+      1C size of raw data
+    1CC1 file pointer to raw data
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+40301040 flags
+         Initialized Data
+         Communal; sym= "`string'" (??_C@_1BM@PJPAAICO@?$AAC?$AAa?$AAb?$AAo?$AAo?$AAs?$AAe?$AA?5?$AAv?$AA0?$AA?4?$AA0?$AA?6?$AA?$AA@)
+         4 byte align
+         Read Only
+
+RAW DATA #1C
+  00000000: 43 00 61 00 62 00 6F 00 6F 00 73 00 65 00 20 00  C.a.b.o.o.s.e. .
+  00000010: 76 00 30 00 2E 00 30 00 0A 00 00 00              v.0...0.....
+
+SECTION HEADER #1D
+  .rdata name
+       0 physical address
+       0 virtual address
+      40 size of raw data
+    1CDD file pointer to raw data
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+40401040 flags
+         Initialized Data
+         Communal; sym= "`string'" (??_C@_1EA@PCALOENF@?$AAD?$AAi?$AAs?$AAp?$AAl?$AAa?$AAy?$AA?5?$AAI?$AAn?$AAi?$AAt?$AAi?$AAa?$AAl?$AAi?$AAs?$AAe?$AAd?$AA?6@)
+         8 byte align
+         Read Only
+
+RAW DATA #1D
+  00000000: 44 00 69 00 73 00 70 00 6C 00 61 00 79 00 20 00  D.i.s.p.l.a.y. .
+  00000010: 49 00 6E 00 69 00 74 00 69 00 61 00 6C 00 69 00  I.n.i.t.i.a.l.i.
+  00000020: 73 00 65 00 64 00 0A 00 57 00 65 00 6C 00 63 00  s.e.d...W.e.l.c.
+  00000030: 6F 00 6D 00 65 00 20 00 74 00 6F 00 20 00 00 00  o.m.e. .t.o. ...
+
+SECTION HEADER #1E
+   .text name
+       0 physical address
+       0 virtual address
+      60 size of raw data
+    1D1D file pointer to raw data
+    1D7D file pointer to relocation table
+    1DAF file pointer to line numbers
+       5 number of relocations
+       C number of line numbers
+60501020 flags
+         Code
+         Communal; sym= "void __cdecl Snake(void)" (?Snake@@YAXXZ)
+         16 byte align
+         Execute Read
+
+RAW DATA #1E
+  00000000: 83 EC 0C 53 56 8D 4C 24 0C E8 00 00 00 00 8D 4C  ƒì.SV.L$.è.....L
+  00000010: 24 0C E8 00 00 00 00 33 F6 32 DB EB 03 8D 49 00  $.è....3ö2Ûë..I.
+  00000020: 8D 46 64 3B 05 00 00 00 00 73 F8 8B 35 00 00 00  .Fd;.....sø‹5...
+  00000030: 00 FE C3 80 FB 3C 88 5C 24 08 75 06 32 DB 88 5C  .þÃ€û<ˆ\$.u.2Ûˆ\
+  00000040: 24 08 8B 44 24 08 50 8D 4C 24 10 E8 00 00 00 00  $.‹D$.P.L$.è....
+  00000050: EB CE 90 90 90 90 90 90 90 90 90 90 90 90 90 90  ëÎ..............
+
+RELOCATIONS #1E
+                                                Symbol    Symbol
+ Offset    Type              Applied To         Index     Name
+ --------  ----------------  -----------------  --------  ------
+ 0000000A  REL32                      00000000        81  ??0VideoDriver@@QAE@XZ (public: __thiscall VideoDriver::VideoDriver(void))
+ 00000013  REL32                      00000000        7F  ?ClearScreen@VideoDriver@@QAEXXZ (public: void __thiscall VideoDriver::ClearScreen(void))
+ 00000025  DIR32                      00000000        8E  ?Ticks@TimerDriver@@2KC (public: static unsigned long volatile  TimerDriver::Ticks)
+ 0000002D  DIR32                      00000000        8E  ?Ticks@TimerDriver@@2KC (public: static unsigned long volatile  TimerDriver::Ticks)
+ 0000004C  REL32                      00000000        8D  ?WriteHexByte@VideoDriver@@QAEXE@Z (public: void __thiscall VideoDriver::WriteHexByte(unsigned char))
+
+LINENUMBERS #1E
+
+ Symbol index:       8B Base line number:   388
+ Symbol name = ?Snake@@YAXXZ (void __cdecl Snake(void))
+ 00000005(  389)  0000000E(  390)  00000017(  392)  00000019(  393)
+ 0000001B(  404)  00000023(  396)  0000002B(  397)  00000031(  398)
+ 0000003C(  399)  00000042(  400)  00000050(  402)
+
+SECTION HEADER #1F
+.debug$S name
+       0 physical address
+       0 virtual address
+      8D size of raw data
+    1DF7 file pointer to raw data
+    1E84 file pointer to relocation table
+       0 file pointer to line numbers
+       3 number of relocations
+       0 number of line numbers
+42101040 flags
+         Initialized Data
+         Communal (no symbol)
+         Discardable
+         1 byte align
+         Read Only
+
+RAW DATA #1F
+  00000000: 04 00 00 00 F5 00 00 00 24 00 00 00 00 00 00 00  ....õ...$.......
+  00000010: 00 00 00 00 52 00 00 00 0C 00 00 00 00 00 00 00  ....R...........
+  00000020: 00 00 00 00 00 00 00 00 05 00 04 00 04 00 00 00  ................
+  00000030: F1 00 00 00 00 00 00 00 2B 00 10 11 00 00 00 00  ñ.......+.......
+  00000040: 00 00 00 00 00 00 00 00 52 00 00 00 05 00 00 00  ........R.......
+  00000050: 00 00 00 00 34 10 00 00 00 00 00 00 00 00 00 53  ....4..........S
+  00000060: 6E 61 6B 65 00 12 00 0B 11 F4 FF FF FF 20 00 00  nake.....ôÿÿÿ ..
+  00000070: 00 53 65 63 6F 6E 64 73 00 0E 00 0B 11 F8 FF FF  .Seconds.....øÿÿ
+  00000080: FF 4F 10 00 00 76 69 64 00 02 00 06 00           ÿO...vid.....
+
+RELOCATIONS #1F
+                                                Symbol    Symbol
+ Offset    Type              Applied To         Index     Name
+ --------  ----------------  -----------------  --------  ------
+ 0000000C  DIR32NB                    00000000        8B  ?Snake@@YAXXZ (void __cdecl Snake(void))
+ 00000058  SECREL                     00000000        8B  ?Snake@@YAXXZ (void __cdecl Snake(void))
+ 0000005C  SECTION                        0000        8B  ?Snake@@YAXXZ (void __cdecl Snake(void))
+
+SECTION HEADER #20
+.debug$F name
+       0 physical address
+       0 virtual address
+      10 size of raw data
+    1EA2 file pointer to raw data
+    1EB2 file pointer to relocation table
+       0 file pointer to line numbers
+       1 number of relocations
+       0 number of line numbers
+42101040 flags
+         Initialized Data
+         Communal (no symbol)
+         Discardable
+         1 byte align
+         Read Only
+
+RAW DATA #20
+  00000000: 00 00 00 00 52 00 00 00 03 00 00 00 00 00 05 02  ....R...........
+
+FPO Data (1)
+                                             Use Has  Frame
+ RVA      Proc Size   Locals  Regs   Prolog  BP  SEH  Type   Params
+ 00000000        82       12     2        5   N   N    fpo        0
+
+RELOCATIONS #20
+                                                Symbol    Symbol
+ Offset    Type              Applied To         Index     Name
+ --------  ----------------  -----------------  --------  ------
+ 00000000  DIR32NB                    00000000        8B  ?Snake@@YAXXZ (void __cdecl Snake(void))
+
+SECTION HEADER #21
+.debug$T name
+       0 physical address
+       0 virtual address
+      58 size of raw data
+    1EBC file pointer to raw data
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+42100040 flags
+         Initialized Data
+         Discardable
+         1 byte align
+         Read Only
+
+RAW DATA #21
+  00000000: 04 00 00 00 52 00 15 15 8A 9C 72 F0 74 76 FC 45  ....R...ŠœrðtvüE
+  00000010: A6 1D D5 7C 4B 9A 11 36 6B 00 00 00 64 3A 5C 6D  ¦.Õ|Kš.6k...d:\m
+  00000020: 79 20 64 6F 63 75 6D 65 6E 74 73 5C 70 72 6F 6A  y documents\proj
+  00000030: 65 63 74 73 5C 6F 6F 6F 73 5C 63 75 72 72 65 6E  ects\ooos\curren
+  00000040: 74 5C 6F 6F 6F 73 5C 72 65 6C 65 61 73 65 5C 76  t\ooos\release\v
+  00000050: 63 37 30 2E 70 64 62 00                          c70.pdb.
+
+COFF SYMBOL TABLE
+000 00000014 DEBUG  notype       Filename     | .file
+    Test.cpp
+002 001D24FA ABS    notype       Static       | @comp.id
+003 00000000 SECT1  notype       Static       | .drectve
+    Section length   2A, #relocs    0, #linenums    0, checksum        0
+005 00000000 SECT2  notype       Static       | .debug$S
+    Section length  40C, #relocs   16, #linenums    0, checksum        0
+007 00000000 SECT3  notype       Static       | .data
+    Section length    4, #relocs    1, #linenums    0, checksum        0
+009 00000000 SECT3  notype       External     | ?pDump@@3PAXA (void *  pDump)
+00A 00000000 SECT4  notype       Static       | .bss
+    Section length  510, #relocs    0, #linenums    0, checksum        0
+00C 00000498 SECT4  notype       External     | ?DispatchTSS@@3UTSS@@A (struct TSS  DispatchTSS)
+00D 00000098 SECT4  notype       External     | ?DispatchStack@@3PAEA (unsigned char *  DispatchStack)
+00E 00000068 SECT4  notype       External     | ?DumpSpace@@3URegDump@@A (struct RegDump  DumpSpace)
+00F 00000000 SECT4  notype       External     | ?GlobalTSS@@3UTSS@@A (struct TSS  GlobalTSS)
+010 00000000 SECT5  notype       Static       | .text
+    Section length   10, #relocs    0, #linenums    1, checksum 8A3A6305, selection    2 (pick any)
+012 00000000 SECT6  notype       Static       | .debug$S
+    Section length   8B, #relocs    3, #linenums    0, checksum        0, selection    5 (pick associative Section 5)
+014 00000025 DEBUG  notype       Filename     | .file
+    d:\my documents\projects\ooos\current\ooos\process.h
+018 00000000 SECT5  notype ()    External     | ??0ProcessNode@@QAE@XZ (public: __thiscall ProcessNode::ProcessNode(void))
+    tag index 0000001A size 00000009 lines 00000A6C next function 00000000
+01A 00000000 SECT5  notype       BeginFunction | .bf
+    line# 0067 end 00000000
+01C 00000001 SECT5  notype       .bf or.ef    | .lf
+01D 00000009 SECT5  notype       EndFunction  | .ef
+    line# 0067
+01F 00000000 SECT7  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 5)
+021 00000000 SECT8  notype       Static       | .text
+    Section length   B0, #relocs   1A, #linenums    A, checksum 2AED252B, selection    1 (pick no duplicates)
+023 00000000 SECT9  notype       Static       | .debug$S
+    Section length   73, #relocs    3, #linenums    0, checksum        0, selection    5 (pick associative Section 8)
+025 00000000 DEBUG  notype       Filename     | .file
+    d:\my documents\projects\ooos\current\ooos\test.cpp
+029 00000000 SECT8  notype ()    External     | ?Exception13_CPP@@YAXXZ (void __cdecl Exception13_CPP(void))
+    tag index 00000041 size 000000A2 lines 00000CE9 next function 00000000
+02B 00000000 SECTA  notype       Static       | .rdata
+    Section length   2A, #relocs    0, #linenums    0, checksum 6674221A, selection    2 (pick any)
+02D 00000000 SECTA  notype       External     | ??_C@_0CK@HNOEPFBO@EDI?3?5?$CFd?5?5?5?5ESI?3?5?$CFd?5?5?5?5EBP?3?5?$CFd?5?5?5@ (`string')
+02E 00000000 SECTB  notype       Static       | .rdata
+    Section length   2A, #relocs    0, #linenums    0, checksum EF1DBE2E, selection    2 (pick any)
+030 00000000 SECTB  notype       External     | ??_C@_0CK@PEINGJCK@EAX?3?5?$CFd?5?5?5?5EBX?3?5?$CFd?5?5?5?5ECX?3?5?$CFd?5?5?5@ (`string')
+031 00000000 SECTC  notype       Static       | .rdata
+    Section length    F, #relocs    0, #linenums    0, checksum 85EDCC33, selection    2 (pick any)
+033 00000000 SECTC  notype       External     | ??_C@_0P@KNMBDACL@Register?5Dump?6?$AA@ (`string')
+034 00000000 SECTD  notype       Static       | .rdata
+    Section length    A, #relocs    0, #linenums    0, checksum A69F8F57, selection    2 (pick any)
+036 00000000 SECTD  notype       External     | ??_C@_09LKOKBINO@FLAGS?5?$CFd?6?$AA@ (`string')
+037 00000000 SECTE  notype       Static       | .rdata
+    Section length    E, #relocs    0, #linenums    0, checksum FEBEC23D, selection    2 (pick any)
+039 00000000 SECTE  notype       External     | ??_C@_0O@NAPKEEAF@CS?3EIP?5?$CFd?3?$CFd?6?$AA@ (`string')
+03A 00000000 SECTF  notype       Static       | .rdata
+    Section length    A, #relocs    0, #linenums    0, checksum 63FC12AC, selection    2 (pick any)
+03C 00000000 SECTF  notype       External     | ??_C@_09HPIJIFCF@ECODE?5?$CFd?6?$AA@ (`string')
+03D 00000000 UNDEF  notype ()    External     | ?printf@@YAXPBDZZ (void __cdecl printf(char const *,...))
+03E 00000000 SECT10 notype       Static       | .rdata
+    Section length   1A, #relocs    0, #linenums    0, checksum 6407D3F4, selection    2 (pick any)
+040 00000000 SECT10 notype       External     | ??_C@_0BK@DEBEJCDJ@General?5Protection?5Fault?6?$AA@ (`string')
+041 00000000 SECT8  notype       BeginFunction | .bf
+    line# 0033 end 00000000
+043 0000000A SECT8  notype       .bf or.ef    | .lf
+044 000000A2 SECT8  notype       EndFunction  | .ef
+    line# 0044
+046 00000000 SECT11 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 8)
+048 00000000 SECT12 notype       Static       | .text
+    Section length   10, #relocs    0, #linenums    0, checksum 8A3A6305, selection    2 (pick any)
+04A 00000000 SECT13 notype       Static       | .debug$S
+    Section length   8D, #relocs    3, #linenums    0, checksum        0, selection    5 (pick associative Section 12)
+04C 00000000 SECT12 notype ()    External     | ??0ProcessQueue@@QAE@XZ (public: __thiscall ProcessQueue::ProcessQueue(void))
+04D 00000000 SECT14 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 12)
+04F 00000000 SECT15 notype       Static       | .text
+    Section length  510, #relocs   6F, #linenums   55, checksum 7C5CBFDD, selection    1 (pick no duplicates)
+051 00000000 SECT16 notype       Static       | .debug$S
+    Section length   B9, #relocs    3, #linenums    0, checksum        0, selection    5 (pick associative Section 15)
+053 00000000 SECT15 notype ()    External     | ?KernelEntry@@YAXXZ (void __cdecl KernelEntry(void))
+    tag index 00000082 size 00000505 lines 000018AA next function 00000000
+055 00000000 SECT17 notype       Static       | .rdata
+    Section length   42, #relocs    0, #linenums    0, checksum 4E54F5CD, selection    2 (pick any)
+057 00000000 SECT17 notype       External     | ??_C@_1EC@KNNFMMNH@?$AAE?$AAn?$AAa?$AAb?$AAl?$AAe?$AA?5?$AAP?$AAI?$AAC?$AA?8?$AAs?$AA?5?$AAa?$AAn?$AAd?$AA?5?$AAi?$AAn?$AAt@ (`string')
+058 00000000 UNDEF  notype ()    External     | ?RawISR@KeyboardDriver@@SAXXZ (public: static void __cdecl KeyboardDriver::RawISR(void))
+059 00000000 SECT18 notype       Static       | .rdata
+    Section length   52, #relocs    0, #linenums    0, checksum DC3E0AC7, selection    2 (pick any)
+05B 00000000 SECT18 notype       External     | ??_C@_1FC@HJFAKFNI@?$AAS?$AAe?$AAt?$AAt?$AAi?$AAn?$AAg?$AA?5?$AAu?$AAp?$AA?5?$AAI?$AAD?$AAT?$AA?5?$AA?$CI?$AAI?$AAn?$AAt?$AAe@ (`string')
+05C 00000000 UNDEF  notype ()    External     | ?RawISR@TimerDriver@@SAXXZ (public: static void __cdecl TimerDriver::RawISR(void))
+05D 00000000 UNDEF  notype       External     | ?GDTAddress@@3PAKA (unsigned long *  GDTAddress)
+05E 00000000 SECT19 notype       Static       | .rdata
+    Section length   50, #relocs    0, #linenums    0, checksum D4CC3FA4, selection    2 (pick any)
+060 00000000 SECT19 notype       External     | ??_C@_1FA@KFBANILN@?$AAS?$AAe?$AAt?$AAt?$AAi?$AAn?$AAg?$AA?5?$AAI?$AAn?$AAi?$AAt?$AAi?$AAa?$AAl?$AA?5?$AAT?$AAS?$AAS?$AA?5@ (`string')
+061 00000000 SECT1A notype       Static       | .rdata
+    Section length    C, #relocs    0, #linenums    0, checksum E16C1F76, selection    2 (pick any)
+063 00000000 SECT1A notype       External     | ??_C@_1M@GFEGCGOG@?$AAD?$AAo?$AAn?$AAe?$AA?6?$AA?$AA@ (`string')
+064 00000000 UNDEF  notype ()    External     | ?Exception14@@YAXXZ (void __cdecl Exception14(void))
+065 00000000 UNDEF  notype ()    External     | ?Exception13@@YAXXZ (void __cdecl Exception13(void))
+066 00000000 UNDEF  notype ()    External     | ?Exception12@@YAXXZ (void __cdecl Exception12(void))
+067 00000000 UNDEF  notype ()    External     | ?Exception11@@YAXXZ (void __cdecl Exception11(void))
+068 00000000 UNDEF  notype ()    External     | ?Exception10@@YAXXZ (void __cdecl Exception10(void))
+069 00000000 UNDEF  notype ()    External     | ?Exception9@@YAXXZ (void __cdecl Exception9(void))
+06A 00000000 UNDEF  notype ()    External     | ?Exception8@@YAXXZ (void __cdecl Exception8(void))
+06B 00000000 UNDEF  notype ()    External     | ?Exception7@@YAXXZ (void __cdecl Exception7(void))
+06C 00000000 UNDEF  notype ()    External     | ?Exception6@@YAXXZ (void __cdecl Exception6(void))
+06D 00000000 UNDEF  notype ()    External     | ?Exception5@@YAXXZ (void __cdecl Exception5(void))
+06E 00000000 UNDEF  notype ()    External     | ?Exception4@@YAXXZ (void __cdecl Exception4(void))
+06F 00000000 UNDEF  notype ()    External     | ?Exception3@@YAXXZ (void __cdecl Exception3(void))
+070 00000000 UNDEF  notype ()    External     | ?Exception2@@YAXXZ (void __cdecl Exception2(void))
+071 00000000 UNDEF  notype ()    External     | ?Exception1@@YAXXZ (void __cdecl Exception1(void))
+072 00000000 UNDEF  notype ()    External     | ?Exception0@@YAXXZ (void __cdecl Exception0(void))
+073 00000000 UNDEF  notype       External     | ?IDTAddress@@3PAKA (unsigned long *  IDTAddress)
+074 00000000 SECT1B notype       Static       | .rdata
+    Section length   52, #relocs    0, #linenums    0, checksum 45572CD0, selection    2 (pick any)
+076 00000000 SECT1B notype       External     | ??_C@_1FC@OADJIDMP@?$AAS?$AAe?$AAt?$AAt?$AAi?$AAn?$AAg?$AA?5?$AAu?$AAp?$AA?5?$AAI?$AAD?$AAT?$AA?5?$AA?$CI?$AAE?$AAx?$AAc?$AAe@ (`string')
+077 00000000 SECT1C notype       Static       | .rdata
+    Section length   1C, #relocs    0, #linenums    0, checksum 867F8038, selection    2 (pick any)
+079 00000000 SECT1C notype       External     | ??_C@_1BM@PJPAAICO@?$AAC?$AAa?$AAb?$AAo?$AAo?$AAs?$AAe?$AA?5?$AAv?$AA0?$AA?4?$AA0?$AA?6?$AA?$AA@ (`string')
+07A 00000000 UNDEF  notype ()    External     | ?SetColour@VideoDriver@@QAEXE@Z (public: void __thiscall VideoDriver::SetColour(unsigned char))
+07B 00000000 UNDEF  notype ()    External     | ?WriteString@VideoDriver@@QAEXPA_W@Z (public: void __thiscall VideoDriver::WriteString(wchar_t *))
+07C 00000000 SECT1D notype       Static       | .rdata
+    Section length   40, #relocs    0, #linenums    0, checksum 7879781C, selection    2 (pick any)
+07E 00000000 SECT1D notype       External     | ??_C@_1EA@PCALOENF@?$AAD?$AAi?$AAs?$AAp?$AAl?$AAa?$AAy?$AA?5?$AAI?$AAn?$AAi?$AAt?$AAi?$AAa?$AAl?$AAi?$AAs?$AAe?$AAd?$AA?6@ (`string')
+07F 00000000 UNDEF  notype ()    External     | ?ClearScreen@VideoDriver@@QAEXXZ (public: void __thiscall VideoDriver::ClearScreen(void))
+080 00000000 UNDEF  notype       External     | ?pDisp@@3PAVVideoDriver@@A (class VideoDriver *  pDisp)
+081 00000000 UNDEF  notype ()    External     | ??0VideoDriver@@QAE@XZ (public: __thiscall VideoDriver::VideoDriver(void))
+082 00000000 SECT15 notype       BeginFunction | .bf
+    line# 0053 end 00000000
+084 00000055 SECT15 notype       .bf or.ef    | .lf
+085 00000505 SECT15 notype       EndFunction  | .ef
+    line# 00fc
+087 00000000 SECT1E notype       Static       | .text
+    Section length   60, #relocs    5, #linenums    C, checksum 2CB11A66, selection    1 (pick no duplicates)
+089 00000000 SECT1F notype       Static       | .debug$S
+    Section length   8D, #relocs    3, #linenums    0, checksum        0, selection    5 (pick associative Section 1e)
+08B 00000000 SECT1E notype ()    External     | ?Snake@@YAXXZ (void __cdecl Snake(void))
+    tag index 0000008F size 00000052 lines 00001DAF next function 00000000
+08D 00000000 UNDEF  notype ()    External     | ?WriteHexByte@VideoDriver@@QAEXE@Z (public: void __thiscall VideoDriver::WriteHexByte(unsigned char))
+08E 00000000 UNDEF  notype       External     | ?Ticks@TimerDriver@@2KC (public: static unsigned long volatile  TimerDriver::Ticks)
+08F 00000000 SECT1E notype       BeginFunction | .bf
+    line# 0184 end 00000000
+091 0000000C SECT1E notype       .bf or.ef    | .lf
+092 00000052 SECT1E notype       EndFunction  | .ef
+    line# 0192
+094 00000000 SECT20 notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 1e)
+096 00000508 SECT4  notype       External     | ?pRdy@@3VProcessQueue@@A (class ProcessQueue  pRdy)
+097 00000500 SECT4  notype       External     | ?pAll@@3VProcessQueue@@A (class ProcessQueue  pAll)
+098 00000000 SECT21 notype       Static       | .debug$T
+    Section length   58, #relocs    0, #linenums    0, checksum        0
+
+String Table Size = 0x7EB bytes
+
+  Summary
+
+         510 .bss
+           4 .data
+          40 .debug$F
+         6DD .debug$S
+          58 .debug$T
+          2A .drectve
+         23D .rdata
+         640 .text

@@ -1,0 +1,313 @@
+Microsoft (R) Macro Assembler Version 6.15.8803		    06/24/02 21:30:02
+.\boot.asm						     Page 1 - 1
+
+
+					; Set up to use 386
+					.386P
+					option	segment:use16
+
+
+				; general defines
+
+
+				; disk access for boot code
+ = 0000				START_HEAD	equ 0	;- The device head, we will be using.
+ = 0000				START_TRACK	equ 0	;- The track, we start reading from.
+ = 0002				START_SECTOR	equ 2	;- The sector, we will start reading the OS from 
+ = 000A				SYSSIZE		equ 10	;- The size in sectors (1 sector = 512 byte)
+ = 0000				FLOPPY_ID		equ 0 
+ = 0002				HEADS		equ 2 
+ = 0012				SECTORS		equ 18	;- Number of sectors for a floppy ( 18 for 1.44 Mb)
+
+				; memory locations
+ = 7C00				BOOTSEG		equ 07c00h ; - We will put the booting BIOS sector here
+ = 0600				INITSEG		equ 600h	;- Here we will move it
+ = 0100				SYSSEG		equ 100h	;- Our kernel will go here
+ = 0092				DATA_ARB		equ 92h	; - The definer of data segment for descriptor
+ = 009A				CODE_ARB		equ 9Ah	;- The definer of code segment for descriptor
+
+
+
+
+
+				; Structures for GDT etc
+
+				; Basic Descriptor Structure
+ 0008				desc	struc
+ 0000  0000				lim_0_15	DW ?
+ 0002  0000				bas_0_15	DW ?
+ 0004  00				bas_16_23 DB ?
+ 0005  00				access	DB ?
+ 0006  00				gran	DB ?
+ 0007  00				bas_24_31 DB ?
+				desc	ends
+
+
+
+				; structure for use with LGDT and LIDT
+ 0006				table_reg	struc
+ 0000  0000				table_lim		dw ?
+ 0002  00000000				table_linear	dd ?
+				table_reg	ends
+
+				; ----------------------
+
+
+
+
+ 0000				DSEG	segment	
+
+					org	0h
+
+ 0000				TEMP_GDT			label	Byte
+ 0000 0000 0000 00 00 00	TEMP_GDT_NULL_DESC		desc	<>
+       00
+ 0008 0000 0000 00 00 00	TEMP_GDT_LINEAR_DESC	desc	<>
+       00
+
+				; scratch for LGDT and LIDT
+ 0010 0000 00000000		temp_gdt_scratch	table_reg	<>
+ 0016 0000 00000000		app_gdt_ram	table_reg <>
+ 001C 0000 00000000		app_idt_ram	table_reg <>
+
+				; align end data
+ 0022 0000			fill	DW	?
+
+ 0024				end_data	label	byte
+
+				; Equates for building temp GDT in RAM
+ = 0008				linear_sel	EQU	1*SIZE(desc)
+ = FFFF				linear_proto_lo	EQU	00000FFFFh
+ = 000F9200			linear_proto_hi	EQU	0000f9200h
+
+				; Protection Enable bit in CR0
+ = 0001				PE_BIT	EQU	1b
+
+ 0024				DSEG	ends
+
+ 0000				CSEG	segment
+
+					; This is where its loaded into memory any how
+					ORG 7c00h
+
+					assume ds:DSEG, es:DSEG
+
+					; move to 
+ 7C00  FA				cli
+ 7C01  33 C0				xor ax,ax
+ 7C03  8E D0				mov ss,ax
+ 7C05  BC 7C00				mov sp, BOOTSEG
+ 7C08  8B F4				mov si, sp
+ 7C0A  8E D8				mov ds, ax
+ 7C0C  8E C0				mov es, ax
+ 7C0E  FB				sti
+ 7C0F  FC				cld
+ 7C10  BF 0600				mov di, INITSEG
+ 7C13  B9 0100				mov cx, 100h
+ 7C16  F3/ A5				rep movsw
+ 7C18  EB 00				jmp go ; jump into new place of the boot sector , mark "go"
+
+
+
+
+
+ 7C1A				go:
+ 7C1A  B8 00F0				mov ax, 0F0h
+ 7C1D  8E D0				mov ss,ax
+ 7C1F  8B E0				mov sp, ax
+					;0xF0:0xF0=0xFF0
+ 7C21  B8 0060				mov ax, 60h ;we'll set data segments in 0x60
+ 7C24  8E D8				mov ds,ax
+ 7C26  8E C0				mov es,ax
+
+					; set display mode
+ 7C28  B4 00				mov ah, 0
+ 7C2A  B0 12				mov al, 12h		; 640x480 16 colour VGA
+
+ 7C2C  CD 10				int 10h
+
+					; set video page
+ 7C2E  B4 05				mov ah, 5
+ 7C30  B0 00				mov al, 0
+
+ 7C32  CD 10				int 10h
+
+					; set cursor position
+ 7C34  B4 02				mov ah, 2
+ 7C36  B7 00				mov bh, 0
+ 7C38  B6 00				mov dh, 0
+ 7C3A  B2 00				mov dl, 0
+
+ 7C3C  CD 10				int 10h
+
+
+ 7C3E  33 C0				xor ax, ax
+ 7C40  05 7D00				add ax, 7d00h
+ 7C43  8B E8				mov bp, ax
+
+ 7C45  8C C8				mov ax, cs
+ 7C47  8E C0				mov es, ax
+
+
+ 7C49  B9 0023				mov cx,35
+ 7C4C  BD 7D00				mov bp, 7d00h
+
+				;	mov bp,welcome
+ 7C4F  E8 004F				call write_message
+
+
+ 7C52  B0 01				mov al, 01h ; the recording command for 8042
+ 7C54  E6 64				out 64h, al
+ 7C56  B0 0F				mov al, 0Fh
+ 7C58  E6 60				out 60h, al
+
+
+					; load GDTR with temporary GDT
+ 7C5A  66| 8D 1E 0000 R			LEA	ebx, temp_gdt
+ 7C5F  67& 66| C7 03			MOV	dword ptr [EBX], 0
+       00000000
+ 7C67  67& 66| C7 43 04			MOV	dword ptr [EBX] + 4, 0
+       00000000
+ 7C70  67& 66| C7 43 08			MOV	dword ptr [EBX] + 8, linear_proto_lo
+       0000FFFF
+ 7C79  67& 66| C7 43 0C			MOV	dword ptr [EBX] + 12, linear_proto_hi
+       000F9200
+ 7C82  66| 89 1E 0012 R			MOV	temp_gdt_scratch.table_linear, EBX
+ 7C87  C7 06 0010 R 000F		MOV	temp_gdt_scratch.table_lim, 15
+
+ 7C8D  66				DB	66h
+ 7C8E  0F 01 16 0010 R			LGDT	TEMP_gdt_scratch
+
+ 7C93  0F 20 C3				mov	ebx, cr0
+ 7C96  66| 83 CB 01			or	ebx, pe_bit
+ 7C9A  0F 22 C3				mov cr0, ebx
+					option	segment:use32
+
+
+ 7C9D  EB 00				jmp		clear_label
+ 7C9F				clear_label:
+					
+ 7C9F  EB FE			loopend:	jmp loopend
+
+
+ 7CA1				write_message:
+ 7CA1  53				push bx
+ 7CA2  50				push ax
+ 7CA3  51				push cx
+ 7CA4  52				push dx
+ 7CA5  51				push cx
+ 7CA6  B4 03				mov ah, 03h; read the current cursor position, so that we don't output the message anywhere.
+ 7CA8  32 FF				xor bh,bh
+ 7CAA  CD 10				int 10h
+ 7CAC  59				pop cx
+ 7CAD  BB 0004				mov bx,0004h ; parameters of outputted symbols: videopage 0, attribute 7 (black and grey)
+ 7CB0  B8 1301				mov ax,1301h ; outputting prompt and moving cursor
+ 7CB3  CD 10				int 10h
+ 7CB5  5A				pop dx
+ 7CB6  59				pop cx
+ 7CB7  58				pop ax
+ 7CB8  5B				pop bx
+
+					;xor ax, ax
+					;add ax, 7d00h
+					;mov bp, ax
+
+					;mov ax, cs
+					;mov es, ax
+
+					;mov ah, 13h
+					;mov al, 1
+					;mov bh, 0
+					;mov bl, 4
+					;mov cx, 35
+					;mov dh, 1
+					;mov dl, 1
+
+					;int 10h
+
+ 7CB9  C3				ret
+
+
+					org	7d00h
+ 7D00 53 74 61 72 74 69		welcome	byte	"Starting OOOS 0.0a ... Please Wait", 0
+       6E 67 20 4F 4F 4F
+       53 20 30 2E 30 61
+       20 2E 2E 2E 20 50
+       6C 65 61 73 65 20
+       57 61 69 74 00
+
+
+
+ 7D23				CSEG	ends
+					
+
+					END
+
+
+Microsoft (R) Macro Assembler Version 6.15.8803		    06/24/02 21:30:02
+.\boot.asm						     Symbols 2 - 1
+
+
+
+
+Structures and Unions:
+
+                N a m e                  Size
+                                         Offset      Type
+
+desc . . . . . . . . . . . . . .	 0008
+  lim_0_15 . . . . . . . . . . .	 0000	     Word
+  bas_0_15 . . . . . . . . . . .	 0002	     Word
+  bas_16_23  . . . . . . . . . .	 0004	     Byte
+  access . . . . . . . . . . . .	 0005	     Byte
+  gran . . . . . . . . . . . . .	 0006	     Byte
+  bas_24_31  . . . . . . . . . .	 0007	     Byte
+table_reg  . . . . . . . . . . .	 0006
+  table_lim  . . . . . . . . . .	 0000	     Word
+  table_linear . . . . . . . . .	 0002	     DWord
+
+
+Segments and Groups:
+
+                N a m e                 Size     Length   Align   Combine Class
+
+CSEG . . . . . . . . . . . . . .	16 Bit	 7D23	  Para	  Private 
+DSEG . . . . . . . . . . . . . .	16 Bit	 0024	  Para	  Private 
+
+
+Symbols:
+
+                N a m e                 Type     Value    Attr
+
+BOOTSEG  . . . . . . . . . . . .	Number	 7C00h	 
+CODE_ARB . . . . . . . . . . . .	Number	 009Ah	 
+DATA_ARB . . . . . . . . . . . .	Number	 0092h	 
+FLOPPY_ID  . . . . . . . . . . .	Number	 0000h	 
+HEADS  . . . . . . . . . . . . .	Number	 0002h	 
+INITSEG  . . . . . . . . . . . .	Number	 0600h	 
+PE_BIT . . . . . . . . . . . . .	Number	 0001h	 
+SECTORS  . . . . . . . . . . . .	Number	 0012h	 
+START_HEAD . . . . . . . . . . .	Number	 0000h	 
+START_SECTOR . . . . . . . . . .	Number	 0002h	 
+START_TRACK  . . . . . . . . . .	Number	 0000h	 
+SYSSEG . . . . . . . . . . . . .	Number	 0100h	 
+SYSSIZE  . . . . . . . . . . . .	Number	 000Ah	 
+TEMP_GDT_LINEAR_DESC . . . . . .	desc	 0008	  DSEG	
+TEMP_GDT_NULL_DESC . . . . . . .	desc	 0000	  DSEG	
+TEMP_GDT . . . . . . . . . . . .	Byte	 0000	  DSEG	
+app_gdt_ram  . . . . . . . . . .	table_reg  0016	    DSEG	
+app_idt_ram  . . . . . . . . . .	table_reg  001C	    DSEG	
+clear_label  . . . . . . . . . .	L Near	 7C9F	  CSEG	
+end_data . . . . . . . . . . . .	Byte	 0024	  DSEG	
+fill . . . . . . . . . . . . . .	Word	 0022	  DSEG	
+go . . . . . . . . . . . . . . .	L Near	 7C1A	  CSEG	
+linear_proto_hi  . . . . . . . .	Number	 000F9200h   
+linear_proto_lo  . . . . . . . .	Number	 FFFFh	 
+linear_sel . . . . . . . . . . .	Number	 0008h	 
+loopend  . . . . . . . . . . . .	L Near	 7C9F	  CSEG	
+temp_gdt_scratch . . . . . . . .	table_reg  0010	    DSEG	
+welcome  . . . . . . . . . . . .	Byte	 7D00	  CSEG	
+write_message  . . . . . . . . .	L Near	 7CA1	  CSEG	
+
+	   0 Warnings
+	   0 Errors

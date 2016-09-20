@@ -1,0 +1,6 @@
+Microsoft (R) COFF/PE Dumper Version 7.00.9466
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file os.exe
+DUMPBIN : fatal error LNK1181: cannot open input file 'os.exe'

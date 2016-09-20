@@ -1,0 +1,176 @@
+Microsoft (R) COFF Binary File Dumper Version 6.00.8447
+Copyright (C) Microsoft Corp 1992-1998. All rights reserved.
+
+
+Dump of file hw.obj
+
+File Type: COFF OBJECT
+
+FILE HEADER VALUES
+             14C machine (i386)
+               5 number of sections
+        3DBB8B3A time date stamp Sun Oct 27 19:44:10 2002
+             21D file pointer to symbol table
+               F number of symbols
+               0 size of optional header
+               0 characteristics
+
+SECTION HEADER #1
+.drectve name
+       0 physical address
+       0 virtual address
+      2A size of raw data
+      DC file pointer to raw data
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+  100A00 flags
+         Info
+         Remove
+         1 byte align
+
+RAW DATA #1
+  00000000: 2F 44 45 46 41 55 4C 54 4C 49 42 3A 22 4C 49 42  /DEFAULTLIB:"LIB
+  00000010: 43 22 20 2F 44 45 46 41 55 4C 54 4C 49 42 3A 22  C" /DEFAULTLIB:"
+  00000020: 4F 4C 44 4E 41 4D 45 53 22 20                    OLDNAMES" 
+
+   Linker Directives
+   -----------------
+   /DEFAULTLIB:"LIBC"
+   /DEFAULTLIB:"OLDNAMES"
+
+SECTION HEADER #2
+.debug$S name
+       0 physical address
+       0 virtual address
+      73 size of raw data
+     106 file pointer to raw data
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+42100040 flags
+         Initialized Data
+         Discardable
+         1 byte align
+         Read Only
+
+RAW DATA #2
+  00000000: 02 00 00 00 33 00 09 00 68 C7 65 B3 2C 64 3A 5C  ....3...hÇe³,d:\
+  00000010: 4D 79 20 44 6F 63 75 6D 65 6E 74 73 5C 50 72 6F  My Documents\Pro
+  00000020: 6A 65 63 74 73 5C 4F 4F 4F 53 5C 52 65 6C 65 61  jects\OOOS\Relea
+  00000030: 73 65 5C 68 77 2E 6F 62 6A 38 00 13 10 01 02 00  se\hw.obj8......
+  00000040: 00 06 00 0D 00 00 00 FA 24 0D 00 00 00 FA 24 21  .......ú$....ú$!
+  00000050: 4D 69 63 72 6F 73 6F 66 74 20 28 52 29 20 4F 70  Microsoft (R) Op
+  00000060: 74 69 6D 69 7A 69 6E 67 20 43 6F 6D 70 69 6C 65  timizing Compile
+  00000070: 72 00 00                                         r..
+
+SECTION HEADER #3
+   .text name
+       0 physical address
+       0 virtual address
+      60 size of raw data
+     179 file pointer to raw data
+     1D9 file pointer to relocation table
+       0 file pointer to line numbers
+       3 number of relocations
+       0 number of line numbers
+60501020 flags
+         Code
+         Communal; sym= _main
+         16 byte align
+         Execute Read
+
+RAW DATA #3
+  00000000: 83 EC 0C A1 04 00 00 00 8B 15 08 00 00 00 8B 0D  ƒì.¡....‹.....‹.
+  00000010: 00 00 00 00 89 44 24 04 89 54 24 08 32 D2 33 C0  ....‰D$.‰T$.2Ò3À
+  00000020: 84 C9 89 4C 24 00 74 26 EB 06 8D 9B 00 00 00 00  „É‰L$.t&ë..›....
+  00000030: C6 04 45 01 80 0B 00 04 FE C2 88 0C 45 00 80 0B  Æ.E.€...þÂˆ.E.€.
+  00000040: 00 0F B6 C2 8A 4C 04 00 84 C9 75 E4 33 C0 83 C4  ..¶ÂŠL..„Éuä3ÀƒÄ
+  00000050: 0C C3 90 90 90 90 90 90 90 90 90 90 90 90 90 90  .Ã..............
+
+RELOCATIONS #3
+                                                Symbol    Symbol
+ Offset    Type              Applied To         Index     Name
+ --------  ----------------  -----------------  --------  ------
+ 00000004  DIR32                      00000004         C  ??_C@_0M@KPLPPDAC@Hello?5World?$AA@ (`string')
+ 0000000A  DIR32                      00000008         C  ??_C@_0M@KPLPPDAC@Hello?5World?$AA@ (`string')
+ 00000010  DIR32                      00000000         C  ??_C@_0M@KPLPPDAC@Hello?5World?$AA@ (`string')
+
+SECTION HEADER #4
+  .rdata name
+       0 physical address
+       0 virtual address
+       C size of raw data
+     1F7 file pointer to raw data
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+40301040 flags
+         Initialized Data
+         Communal; sym= "`string'" (??_C@_0M@KPLPPDAC@Hello?5World?$AA@)
+         4 byte align
+         Read Only
+
+RAW DATA #4
+  00000000: 48 65 6C 6C 6F 20 57 6F 72 6C 64 00              Hello World.
+
+SECTION HEADER #5
+.debug$F name
+       0 physical address
+       0 virtual address
+      10 size of raw data
+     203 file pointer to raw data
+     213 file pointer to relocation table
+       0 file pointer to line numbers
+       1 number of relocations
+       0 number of line numbers
+42101040 flags
+         Initialized Data
+         Communal (no symbol)
+         Discardable
+         1 byte align
+         Read Only
+
+RAW DATA #5
+  00000000: 00 00 00 00 52 00 00 00 03 00 00 00 00 00 03 00  ....R...........
+
+FPO Data (1)
+                                             Use Has  Frame
+ RVA      Proc Size   Locals  Regs   Prolog  BP  SEH  Type   Params
+ 00000000        82       12     0        3   N   N    fpo        0
+
+RELOCATIONS #5
+                                                Symbol    Symbol
+ Offset    Type              Applied To         Index     Name
+ --------  ----------------  -----------------  --------  ------
+ 00000000  DIR32NB                    00000000         9  _main
+
+COFF SYMBOL TABLE
+000 00000000 DEBUG  notype       Filename     | .file
+    hw.cpp
+002 001D24FA ABS    notype       Static       | @comp.id
+003 00000000 SECT1  notype       Static       | .drectve
+    Section length   2A, #relocs    0, #linenums    0, checksum        0
+005 00000000 SECT2  notype       Static       | .debug$S
+    Section length   73, #relocs    0, #linenums    0, checksum        0
+007 00000000 SECT3  notype       Static       | .text
+    Section length   60, #relocs    3, #linenums    0, checksum 8522AA28, selection    1 (pick no duplicates)
+009 00000000 SECT3  notype ()    External     | _main
+00A 00000000 SECT4  notype       Static       | .rdata
+    Section length    C, #relocs    0, #linenums    0, checksum 2B95CA92, selection    2 (pick any)
+00C 00000000 SECT4  notype       External     | ??_C@_0M@KPLPPDAC@Hello?5World?$AA@ (`string')
+00D 00000000 SECT5  notype       Static       | .debug$F
+    Section length   10, #relocs    1, #linenums    0, checksum        0, selection    5 (pick associative Section 3)
+
+String Table Size = 0x28 bytes
+
+  Summary
+
+          10 .debug$F
+          73 .debug$S
+          2A .drectve
+           C .rdata
+          60 .text

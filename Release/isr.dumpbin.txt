@@ -1,0 +1,55 @@
+Microsoft (R) COFF Binary File Dumper Version 6.00.8447
+Copyright (C) Microsoft Corp 1992-1998. All rights reserved.
+
+
+Dump of file isr.obj
+
+File Type: COFF OBJECT
+
+FILE HEADER VALUES
+             14C machine (i386)
+               1 number of sections
+        3DC14268 time date stamp Fri Nov 01 03:47:04 2002
+              55 file pointer to symbol table
+               7 number of symbols
+               0 size of optional header
+               0 characteristics
+
+SECTION HEADER #1
+   .text name
+       0 physical address
+       0 virtual address
+       F size of raw data
+      3C file pointer to raw data
+      4B file pointer to relocation table
+       0 file pointer to line numbers
+       1 number of relocations
+       0 number of line numbers
+60500020 flags
+         Code
+         16 byte align
+         Execute Read
+
+RAW DATA #1
+  00000000: FE 05 00 00 00 00 66 50 B0 20 E6 20 66 58 CF     þ.....fP° æ fXÏ
+
+RELOCATIONS #1
+                                                Symbol    Symbol
+ Offset    Type              Applied To         Index     Name
+ --------  ----------------  -----------------  --------  ------
+ 00000002  DIR32                      00000000         5  ?Count@KeyboardDriver@@2EA (public: static unsigned char  KeyboardDriver::Count)
+
+COFF SYMBOL TABLE
+000 00000000 DEBUG  notype       Filename     | .file
+    d:\My Documents\Pr.text
+002 00000000 SECT1  notype       Static       | .text
+    Section length    F, #relocs    1, #linenums    0, checksum        0
+004 00000000 ABS    notype       Static       | .absolut
+005 00000000 UNDEF  notype       External     | ?Count@KeyboardDriver@@2EA (public: static unsigned char  KeyboardDriver::Count)
+006 00000000 SECT1  notype       External     | ?KeyboardISR@KeyboardDriver@@SAXXZ (public: static void __cdecl KeyboardDriver::KeyboardISR(void))
+
+String Table Size = 0x42 bytes
+
+  Summary
+
+           F .text

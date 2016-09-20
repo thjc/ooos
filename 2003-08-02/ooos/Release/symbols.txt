@@ -1,0 +1,77 @@
+Microsoft (R) COFF Binary File Dumper Version 6.00.8447
+Copyright (C) Microsoft Corp 1992-1998. All rights reserved.
+
+
+Dump of file test.obj
+
+File Type: COFF OBJECT
+
+COFF SYMBOL TABLE
+000 00000011 DEBUG  notype       Filename     | .file
+    Test.cpp
+002 001D24FA ABS    notype       Static       | @comp.id
+003 00000000 SECT1  notype       Static       | .drectve
+    Section length   2A, #relocs    0, #linenums    0, checksum        0
+005 00000000 SECT2  notype       Static       | .debug$S
+    Section length  1CF, #relocs    4, #linenums    0, checksum        0
+007 00000000 SECT3  notype       Static       | .data
+    Section length    4, #relocs    0, #linenums    0, checksum  E1351B8
+009 00000000 SECT3  notype       External     | ?GDTAddress@@3PAKA (unsigned long *  GDTAddress)
+00A 00000000 SECT4  notype       Static       | .bss
+    Section length    4, #relocs    0, #linenums    0, checksum        0
+00C 00000000 SECT4  notype       External     | ?IDTAddress@@3PAKA (unsigned long *  IDTAddress)
+00D 00000000 SECT5  notype       Static       | .text
+    Section length  130, #relocs   1B, #linenums   28, checksum B22FB9E3, selection    1 (pick no duplicates)
+00F 00000000 SECT6  notype       Static       | .debug$S
+    Section length   B0, #relocs    3, #linenums    0, checksum        0, selection    5 (pick associative Section 5)
+011 00000000 DEBUG  notype       Filename     | .file
+    d:\my documents\projects\ooos\current\ooos\test.cpp
+015 00000000 SECT5  notype ()    External     | ?KernelEntry@@YAXXZ (void __cdecl KernelEntry(void))
+    tag index 00000033 size 0000012D lines 000006A7 next function 00000000
+017 00000000 SECT7  notype       Static       | .rdata
+    Section length    2, #relocs    0, #linenums    0, checksum FAEFE88A, selection    2 (pick any)
+019 00000000 SECT7  notype       External     | ??_C@_01EEMJAFIK@?6?$AA@ (`string')
+01A 00000000 SECT8  notype       Static       | .rdata
+    Section length    2, #relocs    0, #linenums    0, checksum 958424A2, selection    2 (pick any)
+01C 00000000 SECT8  notype       External     | ??_C@_01CLKCMJKC@?5?$AA@ (`string')
+01D 00000000 UNDEF  notype ()    External     | ?WriteHexByte@VideoDriver@@QAEXE@Z (public: void __thiscall VideoDriver::WriteHexByte(unsigned char))
+01E 00000000 UNDEF  notype ()    External     | ?KeysBuffered@KeyboardDriver@@SAHXZ (public: static int __cdecl KeyboardDriver::KeysBuffered(void))
+01F 00000000 SECT9  notype       Static       | .rdata
+    Section length   21, #relocs    0, #linenums    0, checksum CDEFF0FD, selection    2 (pick any)
+021 00000000 SECT9  notype       External     | ??_C@_0CB@EIGMDFIP@Enable?5PIC?8s?5and?5interrupts?5?4?4?4?5@ (`string')
+022 00000000 SECTA  notype       Static       | .rdata
+    Section length    6, #relocs    0, #linenums    0, checksum E0A1C997, selection    2 (pick any)
+024 00000000 SECTA  notype       External     | ??_C@_05KOJMJHML@Done?6?$AA@ (`string')
+025 00000000 UNDEF  notype ()    External     | ?RawISR@KeyboardDriver@@SAXXZ (public: static void __cdecl KeyboardDriver::RawISR(void))
+026 00000000 SECTB  notype       Static       | .rdata
+    Section length   14, #relocs    0, #linenums    0, checksum 70F95B60, selection    2 (pick any)
+028 00000000 SECTB  notype       External     | ??_C@_0BE@IANDDPBC@Setting?5up?5IDT?5?4?4?4?5?$AA@ (`string')
+029 00000000 SECTC  notype       Static       | .rdata
+    Section length    E, #relocs    0, #linenums    0, checksum B5BFF57B, selection    2 (pick any)
+02B 00000000 SECTC  notype       External     | ??_C@_0O@JLPLHDED@Caboose?5v0?40?6?$AA@ (`string')
+02C 00000000 UNDEF  notype ()    External     | ?SetColour@VideoDriver@@QAEXE@Z (public: void __thiscall VideoDriver::SetColour(unsigned char))
+02D 00000000 UNDEF  notype ()    External     | ?WriteString@VideoDriver@@QAEXPAD@Z (public: void __thiscall VideoDriver::WriteString(char *))
+02E 00000000 SECTD  notype       Static       | .rdata
+    Section length   20, #relocs    0, #linenums    0, checksum 31AAD019, selection    2 (pick any)
+030 00000000 SECTD  notype       External     | ??_C@_0CA@NHFPHKEL@Display?5Initialised?6Welcome?5to?5?$AA@ (`string')
+031 00000000 UNDEF  notype ()    External     | ?ClearScreen@VideoDriver@@QAEXXZ (public: void __thiscall VideoDriver::ClearScreen(void))
+032 00000000 UNDEF  notype ()    External     | ??0VideoDriver@@QAE@XZ (public: __thiscall VideoDriver::VideoDriver(void))
+033 00000000 SECT5  notype       BeginFunction | .bf
+    line# 0014 end 00000000
+035 00000028 SECT5  notype       .bf or.ef    | .lf
+036 0000012D SECT5  notype       EndFunction  | .ef
+    line# 0065
+038 00000000 SECTE  notype       Static       | .debug$T
+    Section length   58, #relocs    0, #linenums    0, checksum        0
+
+String Table Size = 0x243 bytes
+
+  Summary
+
+           4 .bss
+           4 .data
+         27F .debug$S
+          58 .debug$T
+          2A .drectve
+          6D .rdata
+         130 .text
